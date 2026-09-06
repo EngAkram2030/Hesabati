@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>حساباتي | خلّ عينك على حلالك</title>
+  <meta name="description" content="حساباتي - نظام سحابي سعودي لإدارة الأعمال والمحاسبة والمخزون ونقاط البيع والفوترة الإلكترونية." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f5f3ef;--bg2:#faf9f6;--card:#fcfbf9;--border:#ddd5c9;--text:#162844;--muted:#6c7481;--blue:#173563;--blue2:#2e4f80;--gold:#c99c4c;--shadow:0 14px 32px rgba(22,38,68,.06);--radius:18px;--container:1180px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:'Tajawal',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65} a{text-decoration:none;color:inherit} img{max-width:100%;display:block}
+    .container{width:min(var(--container),calc(100% - 32px));margin-inline:auto}
+    .topbar{background:#081c38;color:#fff;padding:7px 0;font-size:14px}.topbar .inner{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;font-weight:700}.topbar a{border-bottom:1px solid rgba(255,255,255,.4)}
+    header{position:sticky;top:0;z-index:30;background:rgba(245,243,239,.94);backdrop-filter:blur(10px);border-bottom:1px solid #e4ddd2}
+    .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand img{height:46px;width:auto}.brand{display:flex;align-items:center}
+    .menu{display:flex;align-items:center;gap:26px;flex-wrap:wrap;color:#636b77;font-weight:800}.menu a:hover{color:var(--text)}
+    .nav-actions{display:flex;align-items:center;gap:12px}.mini-btn{width:36px;height:36px;border:1px solid var(--border);border-radius:12px;display:grid;place-items:center;background:#fbfaf8;color:#8a9098}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;border-radius:999px;font-weight:800;border:1px solid transparent;transition:.2s ease}.btn:hover{transform:translateY(-1px)}.btn-primary{background:var(--blue);color:#fff;box-shadow:var(--shadow)}.btn-secondary{background:#fff;color:var(--blue);border-color:var(--border)}.btn-outline{background:transparent;border-color:#a6b1c5;color:#fff}
+    .section{padding:74px 0}.section-soft{background:var(--bg2);border-top:1px solid #e9e3d8;border-bottom:1px solid #e9e3d8}
+    .hero{padding:52px 0 70px}.hero-grid{display:grid;grid-template-columns:1.1fr .95fr;gap:34px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;padding:8px 14px;border:1px solid #b6bfcb;border-radius:999px;background:#eef1f4;color:#4f5c73;font-size:14px;font-weight:700}
+    h1,h2,h3{margin:0 0 12px;line-height:1.08} h1{font-size:74px;font-weight:900;letter-spacing:-1.8px} h2{font-size:58px;font-weight:900;letter-spacing:-1.4px} h3{font-size:30px;font-weight:900}
+    .lead{font-size:29px;color:#5d6777;max-width:760px}.small-title{font-size:15px;color:#8b6b3b;font-weight:700;margin-bottom:10px}
+    .check-list{display:grid;grid-template-columns:repeat(2,minmax(180px,1fr));gap:8px 26px;margin-top:20px;color:#5b6574;font-weight:700}.check-list span::before{content:'✓';color:var(--blue);margin-inline-start:8px;font-weight:900}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .quote-form{padding:24px}.quote-form h3{font-size:42px;margin-bottom:8px}.quote-form .desc{font-size:15px;color:#767f8c}.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}.field{display:flex;flex-direction:column;gap:8px} label{font-size:14px;color:#58616d;font-weight:700} input{height:55px;border:1px solid var(--border);border-radius:12px;padding:0 16px;font-size:16px;background:#fff;font-family:inherit;color:var(--text)} .submit{width:100%;margin-top:16px}.contact-mini{text-align:center;margin-top:16px;color:#777f8b;font-size:15px}.contact-mini .links{margin-top:8px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap;font-weight:700}
+    .logos-wrap{text-align:center}.logos-title{font-weight:700;color:#78818c;margin-bottom:28px}.logos{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}.logo-card{height:112px;padding:14px;background:#fff;border:1px solid var(--border);border-radius:16px;display:flex;align-items:center;justify-content:center}.logo-card img{max-width:100%;max-height:72px;object-fit:contain}.notice{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:8px 14px;border:1px solid #d7bf92;border-radius:999px;background:#fff8ee;color:#a07128;font-size:14px}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #e6dfd4;border-bottom:1px solid #e6dfd4;background:#fbfaf7}.stat{padding:22px 8px;text-align:center;position:relative}.stat:not(:last-child)::after{content:'';position:absolute;left:0;top:22px;bottom:22px;width:1px;background:#e3dcd0}.num{font-size:48px;color:var(--blue);font-weight:900}.txt{font-size:16px;color:#717986;font-weight:700}
+    .title-block{max-width:720px;margin-right:auto;margin-bottom:34px}.title-block.center{margin:0 auto 34px;text-align:center}.title-block .lead{font-size:23px}
+    .grid-3,.grid-4,.grid-2,.modules,.pricing-grid,.stories{display:grid;gap:18px}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}.modules{grid-template-columns:repeat(3,1fr)}.pricing-grid{grid-template-columns:repeat(3,1fr)}.stories{grid-template-columns:repeat(2,1fr)}
+    .feature,.step,.role,.module,.adv,.story,.pricing,.compare,.faq-item,.table-wrap{background:var(--card);border:1px solid var(--border);border-radius:var(--radius)}
+    .feature,.step,.role,.module,.adv{padding:24px}.story,.pricing,.compare{padding:24px}
+    .icon{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:#eff3f9;color:var(--blue);margin-bottom:16px;font-weight:900;border:1px solid #dfe6f1}.feature.alert .icon{background:#f8ece8;color:#d46f5e;border-color:#f0d8d0}
+    .feature h4,.step h4,.role h4,.module h4,.adv h4,.story h4,.pricing h4{margin:0 0 8px;font-size:21px}.feature p,.step p,.role p,.module p,.adv p,.story p,.pricing p{margin:0;color:#697280;font-size:17px}
+    .step-num{width:36px;height:36px;border-radius:10px;background:var(--blue);color:#fff;display:grid;place-items:center;margin-inline-start:auto;margin-bottom:18px;font-weight:900}
+    ul.clean{list-style:none;padding:0;margin:14px 0 0}.clean li{margin:8px 0;padding-right:18px;position:relative;color:#566071}.clean li::before{content:'✓';position:absolute;right:0;color:var(--blue);font-weight:900}
+    .note-center{text-align:center}.note-pill{display:inline-block;margin-top:18px;padding:8px 14px;border:1px solid #dfc994;border-radius:999px;background:#fff9ef;color:#9a7028;font-size:14px}
+    .quote-banner{background:var(--blue);border-radius:20px;padding:52px 28px;text-align:center;color:#fff}.quote-banner .stars{color:#f5c26a;letter-spacing:4px;font-size:18px;font-weight:900}.quote-banner blockquote{font-size:40px;line-height:1.35;font-weight:900;margin:14px auto;max-width:880px}
+    .chips{display:flex;gap:10px;flex-wrap:wrap}.chip{padding:10px 16px;border-radius:999px;border:1px solid #cfd6e0;background:#fff;color:#465570;font-weight:700}
+    .before-after{display:grid;grid-template-columns:1.06fr .94fr;gap:18px;margin-top:18px}.compare.good{border:2px solid #244779}.compare h4{font-size:28px;margin:0 0 8px}.compare.bad li::before{content:'✕';color:#c65b4a;margin-inline-start:8px;font-weight:900}.compare.good li::before{content:'✓';color:var(--blue);margin-inline-start:8px;font-weight:900}.compare li{margin:10px 0;color:#566071}
+    .story .stars{color:var(--gold);font-size:14px}.story .badge{display:inline-flex;margin-top:12px;padding:8px 14px;border-radius:999px;background:#eef4fb;border:1px solid #d9e4f4;color:#274a7b;font-weight:700}.story .meta{margin-top:18px;padding-top:14px;border-top:1px solid #e7e0d6;display:flex;align-items:center;justify-content:space-between;color:#6b7481;font-weight:700}
+    .success{background:linear-gradient(135deg,#173563,#234a80);color:#fff;border-radius:20px;padding:30px;display:grid;grid-template-columns:320px 1fr;gap:22px;align-items:center;margin-top:18px}.dash{background:#274877;border-radius:18px;padding:18px}.dash-top{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}.dash-top div{background:rgba(255,255,255,.12);border-radius:14px;padding:16px;text-align:center;font-weight:800}.bars{height:140px;padding:18px;background:rgba(7,19,40,.22);border-radius:14px;display:grid;grid-template-columns:repeat(5,1fr);gap:10px;align-items:end}.bar{border-radius:10px 10px 0 0}.bar:nth-child(1){height:88%;background:#d4ad5d}.bar:nth-child(2){height:46%;background:#5a739f}.bar:nth-child(3){height:64%;background:#173563}.bar:nth-child(4){height:54%;background:#4a6492}.bar:nth-child(5){height:71%;background:#d4ad5d}
+    .table-wrap{overflow:auto;padding:0} table{width:100%;border-collapse:collapse;min-width:760px} thead th{background:#f2eee6;font-size:22px;color:#1e3354} th,td{padding:18px 16px;border-bottom:1px solid #e7dfd4;text-align:center} th:first-child,td:first-child{text-align:right}
+    .support{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;margin-top:18px}.support h3{font-size:34px}.support .clean{margin-top:0}
+    .faq-list{max-width:980px;margin:0 auto}.faq-item{margin-bottom:12px;overflow:hidden} .faq-item summary{list-style:none;display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:22px 24px;font-size:27px;font-weight:800}.faq-item summary::-webkit-details-marker{display:none}.faq-item summary::before{content:'⌄';font-size:24px;color:#58657a}.faq-item[open] summary::before{content:'⌃'}.faq-content{padding:0 24px 22px;color:#66707d;font-size:18px}
+    .pricing{display:flex;flex-direction:column}.pricing.featured{border:2px solid #264a7c;box-shadow:var(--shadow)}.pricing .tag{color:var(--gold);font-weight:800;font-size:15px;margin-bottom:6px}.pricing .plan{font-size:44px;font-weight:900;line-height:1.1}.pricing .price{font-size:54px;font-weight:900;margin-top:8px}.pricing .sub{color:#6c7482;margin-top:6px}.pricing .cta{margin-top:auto;padding-top:18px}
+    .cta-banner{background:var(--blue);border-radius:22px;padding:60px 24px;color:#fff;text-align:center}.cta-banner h2{font-size:68px;color:#fff}.cta-banner p{font-size:24px;color:#e2eaf7;max-width:720px;margin:0 auto 24px}
+    footer{padding:42px 0 54px;background:#fbfaf7;border-top:1px solid #e7e0d6}.footer{display:grid;grid-template-columns:1.45fr 1fr 1fr 1fr;gap:24px}.footer h4{margin:0 0 10px;font-size:28px}.footer a,.footer p{display:block;margin:9px 0;color:#67707e;font-weight:700}.stores{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.store{padding:10px 14px;border:1px solid var(--border);border-radius:12px;background:#fff;color:#52617a;font-weight:700}
+    .floating-whatsapp{position:fixed;left:16px;bottom:16px;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-size:26px;box-shadow:0 12px 24px rgba(0,0,0,.15);z-index:50}
+    @media (max-width:1100px){h1{font-size:58px}h2{font-size:48px}.hero-grid,.before-after,.success,.footer{grid-template-columns:1fr}.grid-4{grid-template-columns:repeat(2,1fr)}.grid-3,.modules,.pricing-grid,.stories,.grid-2,.support{grid-template-columns:1fr 1fr}.logos{grid-template-columns:repeat(3,1fr)}}
+    @media (max-width:800px){.nav{flex-wrap:wrap;padding:10px 0}.menu{order:3;width:100%;justify-content:center;gap:14px;font-size:14px}.hero-grid,.grid-3,.grid-4,.grid-2,.modules,.pricing-grid,.stories,.before-after,.support,.footer,.fields,.logos{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}h1{font-size:44px}h2{font-size:38px}.lead{font-size:21px}.quote-banner blockquote{font-size:28px}.cta-banner h2{font-size:42px}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="container inner"><span>استشارة مجانية وعرض مخصص لنشاطك</span><a href="https://wa.me/966552350055" target="_blank" rel="noopener">تواصل عبر واتساب</a></div></div>
+
+  <header>
+    <div class="container nav">
+      <a href="#top" class="brand"><img src="assets/hisabati-logo.png" alt="شعار حساباتي"></a>
+      <nav class="menu">
+        <a href="#system">النظام</a>
+        <a href="#sectors">المجالات</a>
+        <a href="#clients">عملاؤنا</a>
+        <a href="#pricing">الباقات</a>
+        <a href="#faq">الأسئلة الشائعة</a>
+      </nav>
+      <div class="nav-actions"><span class="mini-btn">☼</span><a class="btn btn-primary" href="#quote">احجز عرضك</a></div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">متوافق مع المرحلة الثانية للفوترة الإلكترونية — هيئة الزكاة والضريبة والجمارك</span>
+          <h1>خَلّ عينك على حلالك</h1>
+          <p class="lead">نظام واحد لنقاط البيع والمحاسبة والمخزون والفريق — تتابعه من جوالك، ويصلك تقريرك اليومي مختصرًا على واتساب. منصة واحدة بلا تشتّت بين البرامج.</p>
+          <div class="check-list"><span>متوافق مع المرحلة الثانية للفوترة الإلكترونية</span><span>يعمل دون اتصال</span><span>خدمة عملاء بالعربية والإنجليزية 24/7</span></div>
+        </div>
+        <div class="card quote-form" id="quote">
+          <h3>اطلب عرض مخصص لنشاطك</h3>
+          <div class="desc">اترك بياناتك ونتواصل معك خلال 48 ساعة بعرض يناسب مجال عملك — بدون أي التزام.</div>
+          <div class="fields">
+            <div class="field"><label>الاسم</label><input placeholder="اسمك الكامل"></div>
+            <div class="field"><label>رقم التواصل</label><input placeholder="05xxxxxxxx"></div>
+            <div class="field"><label>البريد الإلكتروني</label><input placeholder="name@example.com"></div>
+            <div class="field"><label>النشاط</label><input placeholder="مطعم، تجزئة، خياطة..."></div>
+          </div>
+          <a href="https://wa.me/966552350055" target="_blank" rel="noopener" class="btn btn-primary submit">احجز عرضًا</a>
+          <div class="contact-mini">فريقنا يتواصل معك خلال 48 ساعة
+            <div class="links"><a href="https://wa.me/966552350055" target="_blank" rel="noopener">واتساب</a><a href="tel:0546118817">اتصال</a><a href="mailto:info@hisabati.ai">إيميل</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-soft section">
+      <div class="container logos-wrap">
+        <div class="logos-title">منشآت تدير أعمالها اليومية بحساباتي</div>
+        <div class="logos">
+          <div class="logo-card"><img src="assets/client-1.png" alt="شعار عميل"></div>
+          <div class="logo-card"><img src="assets/client-2.png" alt="شعار عميل"></div>
+          <div class="logo-card"><img src="assets/client-3.png" alt="شعار عميل"></div>
+          <div class="logo-card"><img src="assets/client-4.png" alt="شعار عميل"></div>
+          <div class="logo-card"><img src="assets/client-5.png" alt="شعار عميل"></div>
+          <div class="logo-card"><img src="assets/client-6.png" alt="شعار عميل"></div>
+        </div>
+      </div>
+    </section>
+
+    <section><div class="container stats">
+      <div class="stat"><div class="num">600+</div><div class="txt">منشأة تعتمد على حساباتي</div></div>
+      <div class="stat"><div class="num">10+</div><div class="txt">قطاعات بإعدادات جاهزة</div></div>
+      <div class="stat"><div class="num">885K</div><div class="txt">فاتورة ومعاملة منفذة</div></div>
+      <div class="stat"><div class="num">99.9%</div><div class="txt">جاهزية النظام</div></div>
+    </div></section>
+
+    <section class="section">
+      <div class="container">
+        <div class="title-block"><div class="small-title">تعرف هذا الشعور؟</div><h2>إدارة المحل صارت أصعب من الشغل نفسه</h2><p class="lead">لما تكون البيانات مبعثرة، كل قرار يأخذ وقت — وكل شهر يمر بلا صورة واضحة عن أداء نشاطك.</p></div>
+        <div class="grid-3">
+          <div class="feature"><div class="icon">▦</div><h4>بيانات مبعثرة</h4><p>ملفات إكسل، دفاتر، وبرامج ما تتكلم مع بعض — والأرقام ما تتطابق.</p></div>
+          <div class="feature"><div class="icon">◫</div><h4>مخزون غير دقيق</h4><p>ما تعرف الرصيد الحقيقي إلا بعد جرد يدوي، وتبيع أصناف ناقصة أو تخزن زيادة.</p></div>
+          <div class="feature alert"><div class="icon">△</div><h4>أرباح غير واضحة</h4><p>تنتظر آخر الشهر عشان تعرف: ربحت أو خسرت؟ وين راحت الفلوس؟</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-soft section">
+      <div class="container">
+        <div class="title-block"><div class="small-title">البداية سهلة</div><h2>من الطلب إلى الإطلاق في خطوات واضحة</h2><p class="lead">فريقنا معك من أول مكالمة حتى تشغيل النظام بثقة.</p></div>
+        <div class="grid-3">
+          <div class="step"><div class="step-num">1</div><h4>اطلب عرضًا</h4><p>عبئ النموذج أو ارسل على واتساب، واختر نوع نشاطك.</p></div>
+          <div class="step"><div class="step-num">2</div><h4>عرض على نشاطك</h4><p>نتواصل معك خلال 48 ساعة، ونعرض النظام على حالة عملك تحديدًا.</p></div>
+          <div class="step"><div class="step-num">3</div><h4>تجهيز وإطلاق</h4><p>نساعدك في ترحيل الأصناف والأرصدة من نظامك الحالي، وندرب فريقك.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sectors">
+      <div class="container">
+        <div class="title-block"><div class="small-title">حساباتي يخدم دورك</div><h2>مهما كان دورك في المنشأة — النظام يشتغل معك</h2><p class="lead">كل شخص في فريقك يفتح ما يخصه فقط، ويشوف المعلومة التي يحتاجها لاتخاذ قراره.</p></div>
+        <div class="grid-4">
+          <div class="role"><div class="icon">◫</div><h4>صاحب المنشأة</h4><ul class="clean"><li>صورة كاملة عن أعمالك من جوالك</li><li>مبيعات وأرباح لكل فرع لحظيًا</li><li>ملخص يومي على واتساب</li><li>مقارنة أداء الفروع</li></ul></div>
+          <div class="role"><div class="icon">↗</div><h4>المدير</h4><ul class="clean"><li>متابعة التشغيل وتقليل الأخطاء</li><li>متابعة المخزون والطلبات</li><li>صلاحيات لكل موظف</li><li>تنبيهات نقص وتأخر تحصيل</li></ul></div>
+          <div class="role"><div class="icon">▣</div><h4>المحاسب</h4><ul class="clean"><li>قيود وتقارير بلا إعادة إدخال</li><li>قيود تلقائية من كل عملية</li><li>تقارير للموردين والعملاء</li><li>دعم عربي وإنجليزي</li></ul></div>
+          <div class="role"><div class="icon">⌂</div><h4>الكاشير/موظف المبيعات</h4><ul class="clean"><li>بيع سريع بأقل خطوات</li><li>شاشة بيع بالباركود</li><li>يعمل دون اتصال</li><li>فتح وإغلاق الصندوق</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-soft section" id="system">
+      <div class="container">
+        <div class="title-block"><div class="small-title">نظام واحد متكامل</div><h2>كل أعمالك في مكان واحد — بدون تشتّت بين المنصات المتفرقة</h2><p class="lead">من أول عملية بيع في الكاشير إلى القوائم المالية آخر الشهر، كل شيء مترابط ويتحدث لحظيًا.</p></div>
+        <div class="modules">
+          <div class="module"><div class="icon">◪</div><h4>نقاط البيع</h4><p>واجهة كاشير سريعة تعمل دون اتصال، ورديات وصندوق، دفع مقسم، وإرجاع واستبدال.</p></div>
+          <div class="module"><div class="icon">▣</div><h4>المحاسبة والقيود</h4><p>شجرة حسابات وقيود آلية من كل عملية، بنوك ومطابقة، وإقفال الفترات.</p></div>
+          <div class="module"><div class="icon">◫</div><h4>المخزون والمستودعات</h4><p>فروع ومستودعات، تحركات، تحويلات، تتبع الدفعات وتواريخ الانتهاء والأرقام التسلسلية.</p></div>
+          <div class="module"><div class="icon">🛍</div><h4>المشتريات والموردون</h4><p>أوامر شراء، استلام بضاعة، فواتير موردين، ومصاريف قبل وبعد الاستلام.</p></div>
+          <div class="module"><div class="icon">👥</div><h4>إدارة العملاء (CRM)</h4><p>ملف عميل، كشف حساب، نقاط ولاء، وحملات تسويقية.</p></div>
+          <div class="module"><div class="icon">👤</div><h4>الموظفون والرواتب</h4><p>حضور وانصراف، مسيرات، سلف، وعمولات وربط المستخدم بفرعه.</p></div>
+          <div class="module"><div class="icon">⚡</div><h4>الفاتورة الإلكترونية</h4><p>إصدار وربط الفواتير مع هيئة الزكاة والضريبة والجمارك داخل النظام مباشرة.</p></div>
+          <div class="module"><div class="icon">🔌</div><h4>المتجر والتكاملات</h4><p>ربط سلة وزد والمتاجر الإلكترونية، أجهزة مدى، منصات التوصيل وأنظمة أخرى.</p></div>
+          <div class="module"><div class="icon">📈</div><h4>التقارير الفورية</h4><p>مبيعات، أرباح، مخزون، وقوائم مالية جاهزة — مع تقارير مجدولة على البريد.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section"><div class="container"><div class="quote-banner"><div class="stars">★★★★★</div><blockquote>«كل العمليات توصلني على واتساب — صرت أتابع الفرعين من جوالي وأنا مرتاح.»</blockquote><div>عميل كافيه جدة — نموذج مؤقت</div></div></div></section>
+
+    <section class="section-soft section">
+      <div class="container"><div class="title-block"><div class="small-title">مصمم لمجال عملك</div><h2>إعدادات جاهزة لكل نشاط</h2><p class="lead">اذكر نشاطك ونعرض لك حساباتي على حالة عملك تحديدًا.</p></div>
+        <div class="chips"><span class="chip">بيع الجملة والتجزئة</span><span class="chip">مطاعم وكافيهات</span><span class="chip">محلات الخياطة</span><span class="chip">صيدليات</span><span class="chip">إلكترونيات وجوالات</span><span class="chip">ورش صيانة</span><span class="chip">متاجر أقسام</span><span class="chip">فنادق</span><span class="chip">عصائر ومستودعات</span><span class="chip">مراكز وخدمات</span></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="title-block"><div class="small-title">لماذا حساباتي</div><h2>أشياء تفرق معك يوم بيوم</h2></div>
+        <div class="grid-2">
+          <div class="adv"><div class="icon">◫</div><h4>فاتورة إلكترونية مدمجة</h4><p>الربط مع هيئة الزكاة والضريبة في قلب النظام — لا إضافة ولا وسيط ولا رسوم منفصلة.</p></div>
+          <div class="adv"><div class="icon">✆</div><h4>ملخصك على واتساب لحظًا</h4><p>المبيعات والأرباح وتنبيهات المخزون تصلك على واتساب أولاً بأول — تتابع فروعك من جوالك.</p></div>
+          <div class="adv"><div class="icon">⌖</div><h4>من أي مكان، بأي جهاز</h4><p>متصفح، أندرويد، iOS، وكاشير ويندوز — مزامنة لحظية بين كل الأجهزة والفروع.</p></div>
+          <div class="adv"><div class="icon">◌</div><h4>دعم بشري بالعربية والإنجليزية</h4><p>فريق دعم يرد بسرعة عبر واتساب والهاتف، ومساعدة في الترحيل من نظامك السابق.</p></div>
+          <div class="adv"><div class="icon">⟂</div><h4>يعمل دون اتصال</h4><p>لو انقطع الإنترنت يكمل البيع في الكاشير، وتتزامن الفواتير تلقائيًا عند عودة الاتصال.</p></div>
+          <div class="adv"><div class="icon">⌘</div><h4>سعر واضح بالريال</h4><p>اشتراك شهري أو سنوي بلا رسوم خفية ولا مفاجآت — تعرف ما تدفعه من البداية.</p></div>
+        </div>
+        <div class="before-after">
+          <div class="compare good"><h4>بعد حساباتي</h4><ul class="clean"><li>بيانات واحدة تدخل مرة وتظهر في كل التقارير</li><li>رصيد المخزون يتحدث لحظيًا مع كل بيع وشراء</li><li>الأرباح والمصاريف واضحة في أي لحظة</li><li>الفاتورة الإلكترونية مدمجة داخل النظام</li><li>ملخص كل فرع يصلك على واتساب</li></ul></div>
+          <div class="compare bad"><h4>قبل</h4><ul class="clean" style="list-style:none;padding:0;margin:14px 0 0"><li>ملفات إكسل متفرقة وأرقام لا تتطابق</li><li>لا تعرف المخزون الحقيقي إلا بجرد يدوي</li><li>الأرباح غير واضحة إلا آخر الشهر</li><li>فواتير ومبيعات يدويًا وبرامج منفصلة</li><li>متابعة الفروع تحتاج مكالمات ورسائل</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-soft section" id="clients">
+      <div class="container">
+        <div class="title-block"><div class="small-title">منشآت تستخدم حساباتي كل يوم</div><h2>آراء مختصرة من عملائنا</h2></div>
+        <div class="stories">
+          <div class="story"><div class="stars">★★★★★</div><p>«صار إدارة المطعم أسهل، وقت الزحمة والصرفية كلها صارت واضحة بدقة.»</p><span class="badge">وقت أقل في الجرد والحسابات</span><div class="meta"><div><strong>عميل مطعم</strong><br>الرياض · نموذج مؤقت</div><div>؟</div></div></div>
+          <div class="story"><div class="stars">★★★★★</div><p>«كل العمليات توصلني على واتساب — أتابع الفرعين من جوالي.»</p><span class="badge">متابعة الفروع من الجوال</span><div class="meta"><div><strong>عميل كافيه</strong><br>جدة · نموذج مؤقت</div><div>؟</div></div></div>
+          <div class="story"><div class="stars">★★★★★</div><p>«التقارير فرزت لي أكثر طلبًا، وأقدر أفصل قبل ما أخسر.»</p><span class="badge">قرارات شراء أوضح</span><div class="meta"><div><strong>عميل محل خياطة</strong><br>مكة · نموذج مؤقت</div><div>؟</div></div></div>
+          <div class="story"><div class="stars">★★★★★</div><p>«ربط المتجر الإلكتروني مع النظام، وصارت الفواتير والمخزون في مكان واحد.»</p><span class="badge">متجر ومخزن في نظام واحد</span><div class="meta"><div><strong>عميل جملة</strong><br>الرياض · نموذج مؤقت</div><div>؟</div></div></div>
+        </div>
+        <div class="success">
+          <div class="dash"><div class="dash-top"><div>مبيعات اليوم<br>18,542 ريال</div><div>فواتير<br>127</div><div>صافي الربح<br>5,130 ريال</div></div><div class="bars"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div></div>
+          <div><h3 style="font-size:40px;color:#fff">قصة نجاح — تنسيق بيانات عميل حقيقي</h3><p style="color:#dce7f8;font-size:21px">قبل: فروع، ملفات إكسل منفصلة، جرد يدوي، وصعوبة معرفة ربح كل فرع.<br>بعد: تعريف موحد للأصناف، مبيعات ومخزون لكل فرع، ورؤية كاملة للإدارة.</p><div class="chips" style="margin-top:16px"><span class="chip" style="background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.18);color:#fff">وقت أقل للجرد</span><span class="chip" style="background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.18);color:#fff">جرد المخزون</span><span class="chip" style="background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.18);color:#fff">ربح كل فرع واضح</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="title-block"><div class="small-title">مقارنة سريعة</div><h2>ما الذي يجمعه حساباتي في اشتراك واحد</h2><p class="lead">غالبًا تحتاج نظام بيع + برنامج محاسبة + أداة تقارير منفصلة. حساباتي يجمعها.</p></div>
+        <div class="table-wrap"><table><thead><tr><th>القدرة</th><th>حساباتي</th><th>نظام كاشير فقط</th><th>برنامج محاسبة فقط</th></tr></thead><tbody><tr><td>كاشير سريع يعمل دون اتصال إنترنت</td><td>✓</td><td>✓</td><td>محدود</td></tr><tr><td>محاسبة وقيود وقوائم مالية</td><td>✓</td><td>غير متوفر</td><td>✓</td></tr><tr><td>مخزون متعدد الفروع والمستودعات</td><td>✓</td><td>أساسي</td><td>أساسي</td></tr><tr><td>فاتورة إلكترونية (المرحلة الثانية) مدمجة</td><td>✓</td><td>عبر إضافة</td><td>عبر إضافة</td></tr><tr><td>تنبيهات وملخصات على واتساب</td><td>✓</td><td>نادرًا</td><td>غير متوفر</td></tr><tr><td>وحدات جاهزة حسب المجال</td><td>✓</td><td>جزئي</td><td>غير متوفر</td></tr></tbody></table></div>
+        <div class="support"><div><h3>موثوق وآمن</h3><ul class="clean"><li>متوافق مع المرحلة الثانية للفوترة الإلكترونية — هيئة الزكاة والضريبة والجمارك</li><li>حماية البيانات وفق نظام حماية البيانات الشخصية (PDPL)</li><li>تشفير كامل ونسخ احتياطي تلقائي دوري</li><li>جاهزية النظام 99.9% مع دعم على مدار الساعة</li></ul></div><div><h3>يتكامل مع</h3><div class="chips"><span class="chip">سلة</span><span class="chip">زد</span><span class="chip">شوبيفاي</span><span class="chip">ووكومرس</span><span class="chip">مدى</span><span class="chip">شبكة</span><span class="chip">طابعات الفواتير</span><span class="chip">ماسح الباركود</span><span class="chip">منصات التوصيل</span></div></div></div>
+      </div>
+    </section>
+
+    <section class="section-soft section" id="faq">
+      <div class="container"><div class="title-block center"><div class="small-title">الأسئلة الشائعة</div><h2>أسئلة قبل ما تبدأ</h2></div>
+        <div class="faq-list">
+          <details class="faq-item" open><summary>ليش نظام سحابي بدل برامج سطح المكتب؟</summary><div class="faq-content">النظام السحابي يفتح من أي جهاز وفي أي مكان بدون تثبيت، مع نسخ احتياطي تلقائي وتحديثات مستمرة. يربط فروعك وعملياتك من الجوال، ولا يحتاج أجهزة وصيانة خاصة.</div></details>
+          <details class="faq-item"><summary>هل بياناتي آمنة؟</summary><div class="faq-content">نعم، نعتمد آليات حماية وتشفير ونسخ احتياطي دوري، مع إدارة صلاحيات للمستخدمين وربط متوافق مع متطلبات الامتثال.</div></details>
+          <details class="faq-item"><summary>كيف أبدأ مع حساباتي؟</summary><div class="faq-content">أرسل لنا بيانات نشاطك، ثم نرتب عرضًا مناسبًا، وبعد الاتفاق نساعدك في الإعداد وترحيل البيانات والتدريب حتى الإطلاق.</div></details>
+          <details class="faq-item"><summary>هل أحتاج أجهزة خاصة؟</summary><div class="faq-content">غالبًا لا. النظام يعمل على المتصفح والجوال، ويمكن ربطه بأجهزة الكاشير والطابعات والماسحات حسب احتياج نشاطك.</div></details>
+          <details class="faq-item"><summary>هل تساعدوني في الانتقال من نظامي الحالي؟</summary><div class="faq-content">نعم، نساعد في ترحيل الأصناف والعملاء والأرصدة والبيانات الأساسية من النظام الحالي بحسب جاهزية البيانات.</div></details>
+          <details class="faq-item"><summary>هل الفاتورة الإلكترونية متوافقة مع هيئة الزكاة والضريبة والجمارك؟</summary><div class="faq-content">نعم، حساباتي يدعم الفوترة الإلكترونية ومتوافق مع متطلبات المرحلة الثانية داخل النظام.</div></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container"><div class="title-block"><div class="small-title">الأسعار</div><h2>خطة تناسب حجم منشأتك</h2><p class="lead">كل الخطط تشمل الفاتورة الإلكترونية والتحديثات والدعم. اختر باقتك ويضبطها لك فريقنا.</p></div>
+        <div class="pricing-grid">
+          <div class="pricing"><div class="tag">للبداية</div><h4 class="plan">أساسي<br>مجانا</h4><div class="sub">حتى 50 فاتورة شهريًا، فرع واحد</div><ul class="clean"><li>نقطة بيع ومخزون وفواتير</li><li>فوترة إلكترونية وربط أساسي</li><li>تقارير أساسية وتطبيق جوال</li><li>ملخصات واتساب</li></ul><div class="cta"><a class="btn btn-secondary" href="#quote">احجز باقتك الآن</a></div></div>
+          <div class="pricing featured"><div class="tag">الأكثر اختيارًا</div><h4 class="plan">احترافي</h4><div class="price">999 <span style="font-size:.5em">ريال/سنة</span></div><div class="sub">كل ما تحتاجه شامل التحديثات والدعم</div><ul class="clean"><li>فروع متعددة ومحاسبة كاملة وصلاحيات فريق</li><li>فوترة إلكترونية ومخزون متعدد</li><li>محاسبة وقيود وقوائم مالية</li><li>صلاحيات مستخدمين وسجل تدقيق</li><li>ربط المتجر الإلكتروني</li></ul><div class="cta"><a class="btn btn-primary" href="#quote">احجز باقتك الآن</a></div></div>
+          <div class="pricing"><div class="tag">للمنشآت</div><h4 class="plan">حسب الطلب</h4><div class="sub">تسعير مخصص للاحتياجات الأكبر</div><ul class="clean"><li>عدد فروع أكبر، دعم مخصص، وحلول تنفيذية</li><li>دعم أولوية</li><li>ترحيل بيانات فعال</li><li>تقارير وتكاملات مخصصة (API)</li></ul><div class="cta"><a class="btn btn-primary" href="#quote">تحدث مع المبيعات</a></div></div>
+        </div>
+        <p style="text-align:center;color:#717986;margin-top:18px">الأسعار لا تشمل ضريبة القيمة المضافة. الأرقام هنا مبدئية — تعتمد الأسعار النهائية قبل النشر.</p>
+      </div>
+    </section>
+
+    <section class="section-soft section"><div class="container"><div class="cta-banner"><h2>خَلّ عينك على حلالك — من نظام واحد</h2><p>احجز عرضًا مخصصًا لنشاطك — ونتواصل معك خلال 48 ساعة.</p><div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap"><a class="btn btn-secondary" href="#quote">احجز عرضًا</a><a class="btn btn-outline" href="https://wa.me/966552350055" target="_blank" rel="noopener">تواصل عبر واتساب</a></div></div></div></section>
+  </main>
+
+  <footer>
+    <div class="container footer">
+      <div><h4>حساباتي</h4><p>نظام سحابي سعودي لإدارة الأعمال — نقاط البيع، المخزون، المحاسبة والفوترة.</p><div class="stores"><span class="store">AppGallery</span><span class="store">Google Play</span><span class="store">App Store</span><span class="store">Windows</span></div></div>
+      <div><h4>النظام</h4><a href="#system">نقاط البيع</a><a href="#system">المحاسبة</a><a href="#system">المخزون</a><a href="#system">الفوترة الإلكترونية</a></div>
+      <div><h4>الشركة</h4><a href="#clients">لماذا حساباتي</a><a href="#pricing">الأسعار</a><a href="#faq">الأسئلة الشائعة</a><a href="#quote">تواصل معنا</a></div>
+      <div><h4>تواصل</h4><a href="mailto:info@hisabati.ai">info@hisabati.ai</a><a href="tel:0546118817">0546118817</a><a href="https://wa.me/966552350055" target="_blank" rel="noopener">0552350055 واتساب</a><a href="#quote">احجز عرضًا</a></div>
+    </div>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/966552350055" target="_blank" rel="noopener" aria-label="واتساب">✆</a>
+</body>
+</html>
