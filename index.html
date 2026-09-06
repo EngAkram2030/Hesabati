@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
@@ -90,7 +90,52 @@
     body.dark-mode .faq-item summary::before{color:#94A3B8}
     @media (max-width:1100px){h1{font-size:58px}h2{font-size:48px}.hero-grid,.success,.footer{grid-template-columns:1fr}.grid-4{grid-template-columns:repeat(2,1fr)}.grid-3,.modules,.pricing-grid,.stories,.grid-2,.support{grid-template-columns:1fr 1fr}}
     @media (max-width:800px){.before-card,.after-card{grid-column:auto;grid-row:auto}.nav{flex-wrap:wrap;padding:10px 0}.menu{order:3;width:100%;justify-content:center;gap:14px;font-size:14px}.hero-grid,.grid-3,.grid-4,.grid-2,.modules,.pricing-grid,.stories,.before-after,.support,.footer,.fields{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.sector-grid{grid-template-columns:1fr}h1{font-size:44px}h2{font-size:38px}.lead{font-size:21px}.quote-banner blockquote{font-size:28px}.cta-banner h2{font-size:42px}}
-  </style>
+  .hero h1{
+  font-size:64px;
+  white-space:nowrap;
+  letter-spacing:-1px;
+}
+.check-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px 20px;
+  margin-top:20px;
+}
+.check-list span{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:#5b6574;
+  font-weight:700;
+}
+.check-list span::before{
+  content:none !important;
+}
+.check-list i{
+  width:20px;
+  height:20px;
+  border-radius:999px;
+  display:inline-grid;
+  place-items:center;
+  background:#eef3fb;
+  color:var(--blue);
+  font-style:normal;
+  font-size:12px;
+  font-weight:900;
+  border:1px solid #dbe5f2;
+}
+@media (max-width:1100px){
+  .hero h1{
+    font-size:56px;
+  }
+}
+@media (max-width:800px){
+  .hero h1{
+    font-size:42px;
+    white-space:normal;
+  }
+}
+</style>
 </head>
 <body>
   <div class="topbar"><div class="container inner"><span>استشارة مجانية وعرض مخصص لنشاطك</span><a href="https://wa.me/966552350055" target="_blank" rel="noopener">تواصل عبر واتساب</a></div></div>
@@ -124,7 +169,7 @@
           <div class="eyebrow"><img src="assets/zatca-badge.png" alt="متوافق مع متطلبات المرحلة الثانية للفوترة الإلكترونية"></div>
           <h1>خَلّ عينك على حلالك</h1>
           <p class="lead">نظام واحد لنقاط البيع والمحاسبة والمخزون والفريق — تتابعه من جوالك، ويصلك تقريرك اليومي مختصرًا على واتساب. منصة واحدة بلا تشتّت بين البرامج.</p>
-          <div class="check-list"><span>متوافق مع المرحلة الثانية للفوترة الإلكترونية</span><span>يعمل دون اتصال</span><span>خدمة عملاء 24/7</span></div>
+          <div class="check-list"><span><i>✓</i> يعمل دون اتصال</span><span><i>✓</i> دعم فني 24/7</span><span><i>✓</i> جاهزية النظام 99.9%</span></div>
         </div>
         <div class="card quote-form" id="quote">
           <h3>اطلب عرض مخصص لنشاطك</h3>
@@ -377,3 +422,4 @@
   </script>
 </body>
 </html>
+
