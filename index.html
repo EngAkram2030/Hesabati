@@ -53,6 +53,40 @@
     .more-menu{position:relative}.more-menu summary{list-style:none;cursor:pointer;color:#6B7280;font-weight:800}.more-menu summary::-webkit-details-marker{display:none}.more-menu summary::after{content:'⌄';font-size:12px;margin-inline-start:6px}.more-menu[open] summary::after{content:'⌃'}.more-menu-panel{position:absolute;top:34px;right:0;min-width:190px;background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);padding:8px;z-index:60}.more-menu-panel a{display:block;padding:10px 12px;border-radius:10px;white-space:nowrap}.more-menu-panel a:hover{background:#f4f6f9}
     footer{padding:42px 0 54px;background:#fbfaf7;border-top:1px solid #e7e0d6}.footer{display:grid;grid-template-columns:1.45fr 1fr 1fr 1fr;gap:24px}.footer h4{margin:0 0 10px;font-size:28px}.footer a,.footer p{display:block;margin:9px 0;color:#6B7280;font-weight:700}.stores{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.store{padding:10px 14px;border:1px solid var(--border);border-radius:12px;background:#fff;color:#6B7280;font-weight:700}.socials{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.social{width:38px;height:38px;border:1px solid var(--border);border-radius:12px;background:#fff;display:grid!important;place-items:center;margin:0!important;color:var(--blue)!important;font-weight:900!important;font-size:13px}.footer-bottom{margin-top:28px;padding-top:20px;border-top:1px solid #e8e1d7;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:#7b828d;font-size:14px}.footer-bottom a{display:inline!important;margin:0 0 0 14px!important}
     .floating-whatsapp{position:fixed;left:16px;bottom:16px;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-size:26px;box-shadow:0 12px 24px rgba(0,0,0,.15);z-index:50}
+    .mini-btn{cursor:pointer;font-family:'Cairo',system-ui,sans-serif;transition:.2s ease}.mini-btn:hover{border-color:#2563EB;color:#2563EB;transform:translateY(-1px)}
+    body.dark-mode{--bg:#0B162A;--bg2:#10233F;--card:#122845;--border:#28415F;--text:#F8FAFC;--muted:#CBD5E1;--blue:#2563EB;--blue2:#06B6D4;--shadow:0 14px 34px rgba(0,0,0,.28);color-scheme:dark}
+    body.dark-mode{background:var(--bg);color:var(--text)}
+    body.dark-mode .topbar{background:#142C52}
+    body.dark-mode header{background:rgba(11,22,42,.94);border-bottom-color:#28415F}
+    body.dark-mode .menu,body.dark-mode .more-menu summary{color:#CBD5E1}
+    body.dark-mode .nav-actions>a[style]{color:#CBD5E1!important}
+    body.dark-mode .mini-btn{background:#142C52;border-color:#365477;color:#F8FAFC}
+    body.dark-mode .section-soft{background:#10233F;border-color:#28415F}
+    body.dark-mode .eyebrow{background:#142C52;border-color:#365477;color:#E2E8F0}
+    body.dark-mode .lead,body.dark-mode .check-list,body.dark-mode .quote-form .desc,body.dark-mode label,body.dark-mode .contact-mini,body.dark-mode .feature p,body.dark-mode .step p,body.dark-mode .role p,body.dark-mode .module p,body.dark-mode .adv p,body.dark-mode .story p,body.dark-mode .pricing p,body.dark-mode .sector-card span,body.dark-mode .compare li,body.dark-mode .txt,body.dark-mode .pricing .sub,body.dark-mode .faq-content{color:#CBD5E1}
+    body.dark-mode .card,body.dark-mode .feature,body.dark-mode .step,body.dark-mode .role,body.dark-mode .module,body.dark-mode .adv,body.dark-mode .story,body.dark-mode .pricing,body.dark-mode .compare,body.dark-mode .faq-item,body.dark-mode .table-wrap,body.dark-mode .sector-card{background:#122845;border-color:#28415F}
+    body.dark-mode input{background:#0D1E35;border-color:#365477;color:#F8FAFC}
+    body.dark-mode input::placeholder{color:#94A3B8}
+    body.dark-mode .logo-card{background:#FFFFFF;border-color:#D1D5DB}
+    body.dark-mode .stats{background:#0F2038;border-color:#28415F}
+    body.dark-mode .stat:not(:last-child)::after{background:#28415F}
+    body.dark-mode .num{color:#60A5FA}
+    body.dark-mode .icon,body.dark-mode .sector-card .sector-no{background:#193458;border-color:#365477;color:#60A5FA}
+    body.dark-mode .feature.alert .icon{background:#4A2530;border-color:#6D3341;color:#FCA5A5}
+    body.dark-mode .chip{background:#122845;border-color:#365477;color:#E2E8F0}
+    body.dark-mode .compare.good{border-color:#2563EB}
+    body.dark-mode .story .badge{background:#17365F;border-color:#315786;color:#7DD3FC}
+    body.dark-mode thead th{background:#142C52;color:#F8FAFC}
+    body.dark-mode th,body.dark-mode td{border-bottom-color:#28415F}
+    body.dark-mode .more-menu-panel{background:#122845;border-color:#28415F}
+    body.dark-mode .more-menu-panel a:hover{background:#193458}
+    body.dark-mode footer{background:#0D1E35;border-top-color:#28415F}
+    body.dark-mode .footer a,body.dark-mode .footer p{color:#CBD5E1}
+    body.dark-mode .store,body.dark-mode .social{background:#122845;border-color:#365477;color:#E2E8F0!important}
+    body.dark-mode .footer-bottom{border-top-color:#28415F;color:#94A3B8}
+    body.dark-mode .btn-secondary{background:#F8FAFC;color:#142C52;border-color:#E5E7EB}
+    body.dark-mode .small-title{color:#F59E0B}
+    body.dark-mode .faq-item summary::before{color:#94A3B8}
     @media (max-width:1100px){h1{font-size:58px}h2{font-size:48px}.hero-grid,.before-after,.success,.footer{grid-template-columns:1fr}.grid-4{grid-template-columns:repeat(2,1fr)}.grid-3,.modules,.pricing-grid,.stories,.grid-2,.support{grid-template-columns:1fr 1fr}}
     @media (max-width:800px){.nav{flex-wrap:wrap;padding:10px 0}.menu{order:3;width:100%;justify-content:center;gap:14px;font-size:14px}.hero-grid,.grid-3,.grid-4,.grid-2,.modules,.pricing-grid,.stories,.before-after,.support,.footer,.fields{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.sector-grid{grid-template-columns:1fr}h1{font-size:44px}h2{font-size:38px}.lead{font-size:21px}.quote-banner blockquote{font-size:28px}.cta-banner h2{font-size:42px}}
   </style>
@@ -78,7 +112,7 @@
           </div>
         </details>
       </nav>
-      <div class="nav-actions"><a href="https://hisabati.ai/login" target="_blank" rel="noopener" style="font-weight:800;color:#6B7280">تسجيل الدخول</a><span class="mini-btn">☼</span><a class="btn btn-primary" href="#quote">احجز عرضك</a></div>
+      <div class="nav-actions"><a href="https://hisabati.ai/login" target="_blank" rel="noopener" style="font-weight:800;color:#6B7280">تسجيل الدخول</a><button class="mini-btn" id="themeToggle" type="button" aria-label="تفعيل الوضع الليلي" title="الوضع الليلي">☼</button><a class="btn btn-primary" href="#quote">احجز عرضك</a></div>
     </div>
   </header>
 
@@ -319,5 +353,26 @@
 </footer>
 
   <a class="floating-whatsapp" href="https://wa.me/966552350055" target="_blank" rel="noopener" aria-label="واتساب">✆</a>
+
+  <script>
+    (function(){
+      const button = document.getElementById('themeToggle');
+      const body = document.body;
+      const saved = localStorage.getItem('hisabati-theme');
+      if(saved === 'dark'){ body.classList.add('dark-mode'); }
+      function sync(){
+        const dark = body.classList.contains('dark-mode');
+        button.textContent = dark ? '☾' : '☼';
+        button.setAttribute('aria-label', dark ? 'تفعيل الوضع النهاري' : 'تفعيل الوضع الليلي');
+        button.setAttribute('title', dark ? 'الوضع النهاري' : 'الوضع الليلي');
+      }
+      sync();
+      button.addEventListener('click', function(){
+        body.classList.toggle('dark-mode');
+        localStorage.setItem('hisabati-theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+        sync();
+      });
+    })();
+  </script>
 </body>
 </html>
