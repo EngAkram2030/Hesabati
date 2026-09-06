@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>حساباتي | خلّ عينك على حلالك</title>
-  <meta name="hisabati-build" content="2026-09-06-final-v6-eyebrow" />
+  <meta name="hisabati-build" content="2026-09-06-preview-before-github" />
   <meta name="description" content="حساباتي - نظام سحابي سعودي لإدارة الأعمال والمحاسبة والمخزون ونقاط البيع والفوترة الإلكترونية." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -90,231 +90,845 @@
     body.dark-mode .faq-item summary::before{color:#94A3B8}
     @media (max-width:1100px){h1{font-size:58px}h2{font-size:48px}.hero-grid,.success,.footer{grid-template-columns:1fr}.grid-4{grid-template-columns:repeat(2,1fr)}.grid-3,.modules,.pricing-grid,.stories,.grid-2,.support{grid-template-columns:1fr 1fr}}
     @media (max-width:800px){.before-card,.after-card{grid-column:auto;grid-row:auto}.nav{flex-wrap:wrap;padding:10px 0}.menu{order:3;width:100%;justify-content:center;gap:14px;font-size:14px}.hero-grid,.grid-3,.grid-4,.grid-2,.modules,.pricing-grid,.stories,.before-after,.support,.footer,.fields{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.sector-grid{grid-template-columns:1fr}h1{font-size:44px}h2{font-size:38px}.lead{font-size:21px}.quote-banner blockquote{font-size:28px}.cta-banner h2{font-size:42px}}
+  </style>
+
+<style id="preview-final-hero">
+@media (min-width:1101px){
   .hero h1{
-  font-size:64px;
-  white-space:nowrap;
-  letter-spacing:-1px;
+    font-size:50px !important;
+    line-height:1.22 !important;
+    white-space:nowrap !important;
+    letter-spacing:-0.6px !important;
+    margin-bottom:18px !important;
+  }
+  .hero .lead{
+    font-size:18px !important;
+    line-height:1.95 !important;
+    max-width:650px !important;
+    color:#5f6b7c !important;
+  }
 }
-.check-list{
+.hero-benefits{
+  display:flex !important;
+  align-items:center !important;
+  flex-wrap:wrap !important;
+  gap:12px 18px !important;
+  margin-top:20px !important;
+}
+.hero-benefits span{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:7px !important;
+  font-size:14px !important;
+  font-weight:700 !important;
+  color:var(--text) !important;
+  white-space:nowrap !important;
+}
+.hero-benefits b{
+  width:24px !important;
+  height:24px !important;
+  display:inline-grid !important;
+  place-items:center !important;
+  border-radius:8px !important;
+  background:#EEF4FF !important;
+  border:1px solid #D8E4F5 !important;
+  font-size:12px !important;
+  font-weight:400 !important;
+}
+.quote-form{
+  padding:26px 24px !important;
+}
+.quote-form h3{
+  font-size:25px !important;
+  line-height:1.35 !important;
+  white-space:nowrap !important;
+  text-align:center !important;
+  margin-bottom:10px !important;
+}
+.quote-form .desc{
+  font-size:13px !important;
+  line-height:1.9 !important;
+  text-align:center !important;
+  max-width:390px !important;
+  margin:0 auto 16px !important;
+  color:#6B7280 !important;
+}
+.quote-form .contact-mini{
+  font-size:12.5px !important;
+  line-height:1.7 !important;
+  color:#6B7280 !important;
+  text-align:center !important;
+}
+@media (max-width:1100px){
+  .hero h1{
+    white-space:normal !important;
+    font-size:42px !important;
+  }
+  .quote-form h3{
+    white-space:normal !important;
+  }
+}
+@media (max-width:700px){
+  .hero-benefits{
+    flex-direction:column !important;
+    align-items:flex-start !important;
+  }
+}
+</style>
+
+
+<style id="section-headings-preview-fix">
+/* توحيد عناوين الأقسام مع حجم عنوان الهيرو ومنع تداخل السطرين */
+.section h2,
+.section-soft h2,
+.title-block h2{
+  font-size:50px !important;
+  line-height:1.35 !important;
+  letter-spacing:-0.6px !important;
+  margin-bottom:18px !important;
+}
+
+.title-block{
+  max-width:900px !important;
+}
+
+.title-block .lead{
+  margin-top:14px !important;
+}
+
+@media (max-width:1100px){
+  .section h2,
+  .section-soft h2,
+  .title-block h2{
+    font-size:42px !important;
+    line-height:1.4 !important;
+  }
+}
+
+@media (max-width:700px){
+  .section h2,
+  .section-soft h2,
+  .title-block h2{
+    font-size:34px !important;
+    line-height:1.45 !important;
+  }
+}
+</style>
+
+
+<style id="steps-and-features-preview-v2">
+/* ترقيم خطوات البداية يكون من اليمين */
+.step{
+  position:relative;
+}
+.step-num{
+  margin:0 0 18px auto !important;
+  margin-inline-start:0 !important;
+  margin-inline-end:auto !important;
+}
+
+/* قسم المميزات المختصر */
+.features-showcase{
+  padding:74px 0;
+}
+.features-showcase .title-block{
+  margin-bottom:30px !important;
+}
+.feature-tabs-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+.feature-compact{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:20px;
+  min-height:176px;
+  box-shadow:var(--shadow);
+  transition:.2s ease;
+}
+.feature-compact:hover{
+  transform:translateY(-2px);
+}
+.feature-compact .feature-top{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:12px;
+}
+.feature-compact .feature-mini-icon{
+  width:38px;
+  height:38px;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  flex:0 0 38px;
+  background:#eef4ff;
+  border:1px solid #dbe6f5;
+  font-size:18px;
+}
+.feature-compact h4{
+  margin:0;
+  font-size:18px;
+  line-height:1.45;
+  color:var(--text);
+}
+.feature-compact p{
+  margin:0;
+  color:#697280;
+  font-size:14px;
+  line-height:1.8;
+}
+.feature-compact .feature-linkline{
+  margin-top:12px;
+  font-size:12.5px;
+  font-weight:800;
+  color:var(--blue2);
+}
+.features-note{
+  margin-top:18px;
+  text-align:center;
+  color:#6B7280;
+  font-size:14px;
+}
+@media (max-width:1100px){
+  .feature-tabs-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:700px){
+  .feature-tabs-grid{grid-template-columns:1fr;}
+  .feature-compact{min-height:auto;}
+}
+</style>
+
+
+<style id="daily-difference-preview-fix">
+.adv .icon{
+  font-size:17px !important;
+  line-height:1 !important;
+}
+.adv h4{
+  line-height:1.5 !important;
+}
+.adv p{
+  line-height:1.85 !important;
+}
+</style>
+
+
+<style id="daily-diff-grid-3cols">
+.daily-diff-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:18px !important;
+}
+.daily-diff-grid .adv{
+  min-height:220px;
+  display:flex;
+  flex-direction:column;
+}
+.daily-diff-grid .adv p{
+  margin-top:auto;
+}
+@media (max-width:1050px){
+  .daily-diff-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+}
+@media (max-width:700px){
+  .daily-diff-grid{
+    grid-template-columns:1fr !important;
+  }
+  .daily-diff-grid .adv{
+    min-height:auto;
+  }
+}
+</style>
+
+
+<style id="modern-testimonials-preview">
+/* آراء العملاء - شكل أحدث بدون حركة */
+.stories{
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:22px !important;
+}
+
+.story{
+  position:relative;
+  padding:26px !important;
+  border-radius:22px !important;
+  background:linear-gradient(180deg,#ffffff 0%, #fbfcff 100%) !important;
+  border:1px solid #e4ebf5 !important;
+  box-shadow:0 16px 36px rgba(20,44,82,.08) !important;
+  overflow:hidden;
+}
+
+.story::before{
+  content:"“";
+  position:absolute;
+  top:14px;
+  left:18px;
+  font-size:64px;
+  line-height:1;
+  color:rgba(20,44,82,.08);
+  font-weight:800;
+  pointer-events:none;
+}
+
+.story .stars{
+  font-size:15px !important;
+  letter-spacing:2px !important;
+  margin-bottom:14px !important;
+  color:#d8a84a !important;
+}
+
+.story p{
+  position:relative;
+  margin:0 0 16px !important;
+  font-size:16px !important;
+  line-height:1.95 !important;
+  color:#485567 !important;
+  min-height:94px;
+}
+
+.story .badge{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:8px !important;
+  margin-top:0 !important;
+  padding:9px 14px !important;
+  border-radius:999px !important;
+  background:#eef4ff !important;
+  border:1px solid #d7e3f6 !important;
+  color:#22467a !important;
+  font-size:13px !important;
+  font-weight:800 !important;
+}
+
+.story .meta{
+  margin-top:18px !important;
+  padding-top:16px !important;
+  border-top:1px solid #e8edf4 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:14px !important;
+}
+
+.story .meta strong{
+  display:block;
+  margin-bottom:3px;
+  color:#162844;
+  font-size:16px;
+}
+
+.story .meta div{
+  color:#6b7685 !important;
+  font-weight:700 !important;
+  font-size:14px !important;
+}
+
+.story .meta .avatar{
+  width:52px;
+  height:52px;
+  border-radius:16px;
+  display:grid;
+  place-items:center;
+  flex:0 0 52px;
+  background:linear-gradient(135deg,#142C52,#2e5a93);
+  color:#fff !important;
+  font-size:12px !important;
+  font-weight:800 !important;
+  border:3px solid #f6f9ff;
+  box-shadow:0 10px 18px rgba(20,44,82,.14);
+}
+
+@media (max-width:900px){
+  .stories{
+    grid-template-columns:1fr !important;
+  }
+  .story p{
+    min-height:auto;
+  }
+}
+</style>
+
+
+<style id="testimonials-modern-v2">
+/* آراء العملاء — نسخة أنظف وأكثر حداثة */
+.stories{
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:18px !important;
+}
+
+.story{
+  position:relative !important;
+  padding:24px !important;
+  border-radius:20px !important;
+  background:#fff !important;
+  border:1px solid #e5eaf1 !important;
+  box-shadow:0 10px 28px rgba(20,44,82,.07) !important;
+  overflow:hidden !important;
+  text-align:right !important;
+}
+
+.story::before{
+  content:"“" !important;
+  position:absolute !important;
+  top:18px !important;
+  left:20px !important;
+  font-family:Georgia,serif !important;
+  font-size:52px !important;
+  line-height:1 !important;
+  color:rgba(37,99,235,.10) !important;
+  pointer-events:none !important;
+}
+
+.story .stars{
+  display:block !important;
+  margin:0 0 14px !important;
+  color:#F59E0B !important;
+  font-size:14px !important;
+  letter-spacing:1px !important;
+}
+
+.story p{
+  margin:0 !important;
+  min-height:120px !important;
+  font-size:15px !important;
+  line-height:1.95 !important;
+  color:#556173 !important;
+  text-align:right !important;
+}
+
+.story .meta{
+  margin-top:20px !important;
+  padding-top:16px !important;
+  border-top:1px solid #edf0f4 !important;
+  display:block !important;
+}
+
+.story .meta strong{
+  display:block !important;
+  margin:0 0 4px !important;
+  font-size:15px !important;
+  line-height:1.5 !important;
+  color:#142C52 !important;
+}
+
+.story .meta > div:not(.avatar){
+  color:#7a8492 !important;
+  font-size:13px !important;
+  font-weight:600 !important;
+}
+
+.story .avatar,
+.story .badge{
+  display:none !important;
+}
+
+@media (max-width:1050px){
+  .stories{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+}
+
+@media (max-width:700px){
+  .stories{
+    grid-template-columns:1fr !important;
+  }
+  .story p{
+    min-height:auto !important;
+  }
+}
+</style>
+
+
+<style id="testimonials-final-preview-v3">
+.stories{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:20px !important;
+  margin-top:26px !important;
+}
+
+.story{
+  position:relative !important;
+  background:linear-gradient(180deg,#ffffff 0%,#fbfdff 100%) !important;
+  border:1px solid #dfe8f3 !important;
+  border-radius:24px !important;
+  padding:24px 22px !important;
+  box-shadow:0 14px 34px rgba(20,44,82,.08) !important;
+  overflow:hidden !important;
+  min-height:280px !important;
+  display:flex !important;
+  flex-direction:column !important;
+}
+
+.story::after{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 auto auto 0 !important;
+  width:100% !important;
+  height:4px !important;
+  background:linear-gradient(90deg,#1d4ed8,#60a5fa) !important;
+  opacity:.12 !important;
+}
+
+.quote-mark{
+  position:absolute !important;
+  top:18px !important;
+  left:18px !important;
+  width:42px !important;
+  height:42px !important;
+  border-radius:14px !important;
+  display:grid !important;
+  place-items:center !important;
+  background:linear-gradient(135deg,#2563eb,#3b82f6) !important;
+  color:#fff !important;
+  font-size:28px !important;
+  line-height:1 !important;
+  box-shadow:0 10px 20px rgba(37,99,235,.24) !important;
+}
+
+.story-head{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  align-items:center !important;
+  gap:10px !important;
+  margin:2px 0 14px !important;
+  padding-left:58px !important;
+}
+
+.story .stars{
+  color:#f4b000 !important;
+  font-size:14px !important;
+  letter-spacing:1px !important;
+  line-height:1 !important;
+}
+
+.story-chip{
+  display:inline-flex !important;
+  align-items:center !important;
+  padding:7px 12px !important;
+  border-radius:999px !important;
+  background:#eef4ff !important;
+  color:#23467a !important;
+  border:1px solid #dbe5f4 !important;
+  font-size:12px !important;
+  font-weight:800 !important;
+}
+
+.story p{
+  margin:0 !important;
+  color:#526072 !important;
+  font-size:15px !important;
+  line-height:1.95 !important;
+  text-align:right !important;
+  flex:1 1 auto !important;
+}
+
+.story .meta{
+  margin-top:18px !important;
+  padding-top:14px !important;
+  border-top:1px solid #ebf0f6 !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap:14px !important;
+}
+
+.story .meta strong{
+  display:block !important;
+  color:#142c52 !important;
+  font-size:15px !important;
+  line-height:1.5 !important;
+  margin:0 0 2px !important;
+}
+
+.story .meta span{
+  display:block !important;
+  color:#7b8694 !important;
+  font-size:13px !important;
+  font-weight:700 !important;
+}
+
+.story .badge,
+.story .avatar{
+  display:none !important;
+}
+
+@media (max-width:1050px){
+  .stories{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+}
+@media (max-width:700px){
+  .stories{
+    grid-template-columns:1fr !important;
+  }
+  .story{
+    min-height:auto !important;
+  }
+}
+</style>
+
+
+<style id="comparison-addons-preview-v1">
+@media (min-width:1101px){
+  .section .title-block h2{
+    white-space:nowrap;
+  }
+}
+
+/* إضافات حساباتي */
+.hisabati-addons{
+  margin-top:34px;
+  padding:30px;
+  border-radius:24px;
+  background:#f4f7fb;
+  border:1px solid #e3e9f2;
+}
+.addons-head{
+  text-align:center;
+  margin-bottom:24px;
+}
+.addons-head h3{
+  margin:0 0 7px;
+  font-size:30px;
+  color:#142C52;
+}
+.addons-head p{
+  margin:0;
+  color:#6B7280;
+  font-size:14px;
+}
+.addons-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:16px;
+}
+.addon-card{
+  background:#fff;
+  border:1px solid #e2e8f0;
+  border-radius:20px;
+  padding:20px;
+  text-align:center;
+  box-shadow:0 10px 24px rgba(20,44,82,.06);
+}
+.addon-icon{
+  width:44px;
+  height:44px;
+  margin:0 auto 12px;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  background:#eaf2ff;
+  color:#2563EB;
+  font-size:20px;
+}
+.addon-card h4{
+  margin:0 0 5px;
+  font-size:17px;
+  color:#142C52;
+}
+.addon-card .addon-desc{
+  min-height:42px;
+  margin:0 0 16px;
+  color:#7a8493;
+  font-size:12.5px;
+  line-height:1.65;
+}
+.qty-control{
+  display:grid;
+  grid-template-columns:48px 1fr 48px;
+  align-items:center;
+  gap:9px;
+  margin-bottom:12px;
+}
+.qty-control button{
+  height:36px;
+  border-radius:10px;
+  border:1px solid #dfe6f0;
+  background:#f7f9fc;
+  color:#142C52;
+  font-size:18px;
+  font-weight:800;
+  cursor:pointer;
+}
+.qty-control .qty{
+  font-size:18px;
+  font-weight:800;
+  color:#142C52;
+}
+.addon-price{
+  font-size:13px;
+  color:#606b7a;
+}
+.addon-price strong{
+  color:#142C52;
+  font-size:17px;
+}
+.addons-total{
+  margin-top:18px;
+  background:#fff;
+  border:1px solid #e2e8f0;
+  border-radius:18px;
+  padding:18px 22px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  font-weight:800;
+}
+.addons-total strong{
+  font-size:24px;
+  color:#2563EB;
+}
+.addons-note{
+  margin-top:10px;
+  text-align:center;
+  color:#7b8491;
+  font-size:12px;
+}
+@media (max-width:1050px){
+  .addons-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media (max-width:700px){
+  .section .title-block h2{white-space:normal;}
+  .hisabati-addons{padding:20px 14px;}
+  .addons-grid{grid-template-columns:1fr;}
+  .addons-total{align-items:flex-start;flex-direction:column;}
+}
+</style>
+
+
+<style id="addons-grid-final-preview">
+.addons-grid-3{
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:18px !important;
+}
+.addons-grid-3 .addon-card{
+  min-height:245px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.addons-grid-3 .addon-desc{
+  min-height:44px !important;
+}
+.addons-grid-3 .addon-price{
+  margin-top:auto;
+  margin-bottom:14px;
   display:flex;
   flex-wrap:wrap;
-  gap:12px 20px;
-  margin-top:20px;
+  justify-content:center;
+  align-items:baseline;
+  gap:4px;
 }
-.check-list span{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  color:#5b6574;
-  font-weight:700;
+.addons-grid-3 .addon-price small{
+  display:block;
+  width:100%;
+  margin-top:2px;
+  color:#8a94a3;
+  font-size:10px;
 }
-.check-list span::before{
-  content:none !important;
+@media(max-width:1000px){
+  .addons-grid-3{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
 }
-.check-list i{
-  width:20px;
-  height:20px;
-  border-radius:999px;
-  display:inline-grid;
-  place-items:center;
-  background:#eef3fb;
-  color:var(--blue);
-  font-style:normal;
-  font-size:12px;
-  font-weight:900;
-  border:1px solid #dbe5f2;
+@media(max-width:650px){
+  .addons-grid-3{grid-template-columns:1fr !important;}
 }
-@media (max-width:1100px){
-  .hero h1{
-    font-size:56px;
+</style>
+
+
+<style id="addons-compact-4cols-preview">
+/* إضافات حساباتي - نسخة أصغر وأكثر كثافة */
+.hisabati-addons{
+  padding:24px !important;
+}
+.addons-head{
+  margin-bottom:18px !important;
+}
+.addons-head h3{
+  font-size:26px !important;
+}
+.addons-head p{
+  font-size:13px !important;
+}
+.addons-grid-3{
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:14px !important;
+}
+.addons-grid-3 .addon-card{
+  min-height:205px !important;
+  padding:16px !important;
+  border-radius:16px !important;
+}
+.addons-grid-3 .addon-icon{
+  width:38px !important;
+  height:38px !important;
+  margin-bottom:9px !important;
+  font-size:17px !important;
+  border-radius:10px !important;
+}
+.addons-grid-3 .addon-card h4{
+  font-size:15px !important;
+  margin-bottom:4px !important;
+}
+.addons-grid-3 .addon-desc{
+  min-height:38px !important;
+  margin-bottom:10px !important;
+  font-size:11.5px !important;
+  line-height:1.55 !important;
+}
+.addons-grid-3 .addon-price{
+  margin-bottom:10px !important;
+  font-size:11.5px !important;
+}
+.addons-grid-3 .addon-price strong{
+  font-size:15px !important;
+}
+.addons-grid-3 .addon-price small{
+  font-size:9.5px !important;
+}
+.addons-grid-3 .qty-control{
+  grid-template-columns:38px 1fr 38px !important;
+  gap:7px !important;
+  margin-bottom:0 !important;
+}
+.addons-grid-3 .qty-control button{
+  height:32px !important;
+  font-size:16px !important;
+  border-radius:9px !important;
+}
+.addons-grid-3 .qty-control .qty{
+  font-size:15px !important;
+}
+.addons-total{
+  margin-top:14px !important;
+  padding:14px 18px !important;
+}
+.addons-total strong{
+  font-size:21px !important;
+}
+
+@media (max-width:1150px){
+  .addons-grid-3{
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
   }
 }
-@media (max-width:800px){
-  .hero h1{
-    font-size:42px;
-    white-space:normal;
+@media (max-width:850px){
+  .addons-grid-3{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+}
+@media (max-width:600px){
+  .addons-grid-3{
+    grid-template-columns:1fr !important;
   }
 }
 </style>
-<style id="hero-balance-v10">
 
-@media (min-width:1101px){
-    .hero h1{
-        font-size:52px !important;
-        line-height:1.22 !important;
-        white-space:nowrap !important;
-        letter-spacing:-0.8px !important;
-        margin-bottom:18px !important;
-    }
-
-    .hero .lead{
-        font-size:20px !important;
-        line-height:1.85 !important;
-        max-width:680px !important;
-        color:#5f6b7c !important;
-        margin-bottom:0 !important;
-    }
-}
-
-.hero-benefits{
-    display:flex !important;
-    align-items:center !important;
-    flex-wrap:wrap !important;
-    gap:12px 18px !important;
-    margin-top:22px !important;
-}
-
-.hero-benefits span{
-    display:inline-flex !important;
-    align-items:center !important;
-    gap:7px !important;
-    font-size:14px !important;
-    font-weight:700 !important;
-    color:var(--text) !important;
-    white-space:nowrap !important;
-}
-
-.hero-benefits b{
-    width:24px !important;
-    height:24px !important;
-    display:inline-grid !important;
-    place-items:center !important;
-    border-radius:8px !important;
-    background:#EEF4FF !important;
-    border:1px solid #D8E4F5 !important;
-    font-size:12px !important;
-    font-weight:400 !important;
-}
-
-/* تقريب مظهر مربع العرض من الهيرو */
-.quote-form h3{
-    font-size:27px !important;
-    line-height:1.35 !important;
-    margin-bottom:12px !important;
-}
-
-.quote-form .desc{
-    font-size:14px !important;
-    line-height:1.9 !important;
-    max-width:390px !important;
-    margin-inline:auto !important;
-}
-
-@media (max-width:1100px){
-    .hero h1{
-        white-space:normal !important;
-        font-size:42px !important;
-    }
-
-    .hero .lead{
-        font-size:18px !important;
-    }
-}
-
-@media (max-width:700px){
-    .hero-benefits{
-        flex-direction:column !important;
-        align-items:flex-start !important;
-    }
-}
-
-</style>
-<style id="hero-v12-final">
-
-@media (min-width:1101px){
-    .hero h1{
-        font-size:48px !important;
-        line-height:1.25 !important;
-        white-space:nowrap !important;
-        letter-spacing:-0.5px !important;
-        margin-bottom:16px !important;
-    }
-
-    .hero .lead{
-        font-size:18px !important;
-        line-height:1.9 !important;
-        max-width:650px !important;
-        color:#5f6b7c !important;
-    }
-}
-
-.hero-benefits{
-    display:flex !important;
-    align-items:center !important;
-    flex-wrap:wrap !important;
-    gap:12px 18px !important;
-    margin-top:20px !important;
-}
-
-.hero-benefits span{
-    display:inline-flex !important;
-    align-items:center !important;
-    gap:7px !important;
-    font-size:14px !important;
-    font-weight:700 !important;
-    color:var(--text) !important;
-    white-space:nowrap !important;
-}
-
-.hero-benefits b{
-    width:24px !important;
-    height:24px !important;
-    display:inline-grid !important;
-    place-items:center !important;
-    border-radius:8px !important;
-    background:#EEF4FF !important;
-    border:1px solid #D8E4F5 !important;
-    font-size:12px !important;
-    font-weight:400 !important;
-}
-
-.quote-form{
-    padding:26px 24px !important;
-}
-
-.quote-form h3{
-    font-size:25px !important;
-    line-height:1.35 !important;
-    white-space:nowrap !important;
-    text-align:center !important;
-    margin-bottom:10px !important;
-}
-
-.quote-form .desc{
-    font-size:13px !important;
-    line-height:1.85 !important;
-    text-align:center !important;
-    max-width:390px !important;
-    margin:0 auto 16px !important;
-    color:#6B7280 !important;
-}
-
-.quote-form .contact-mini{
-    font-size:12.5px !important;
-    line-height:1.7 !important;
-    color:#6B7280 !important;
-    text-align:center !important;
-}
-
-@media (max-width:1100px){
-    .hero h1{
-        white-space:normal !important;
-        font-size:42px !important;
-    }
-
-    .quote-form h3{
-        white-space:normal !important;
-    }
-}
-
-@media (max-width:700px){
-    .hero-benefits{
-        flex-direction:column !important;
-        align-items:flex-start !important;
-    }
-}
-
-</style>
 </head>
 <body>
   <div class="topbar"><div class="container inner"><span>استشارة مجانية وعرض مخصص لنشاطك</span><a href="https://wa.me/966552350055" target="_blank" rel="noopener">تواصل عبر واتساب</a></div></div>
@@ -348,11 +962,15 @@
           <div class="eyebrow"><img src="assets/zatca-badge.png" alt="متوافق مع متطلبات المرحلة الثانية للفوترة الإلكترونية"></div>
           <h1>خَلّ عينك على حلالك</h1>
           <p class="lead">نظام واحد لنقاط البيع والمحاسبة والمخزون والفريق — تتابعه من جوالك، ويصلك تقريرك اليومي مختصرًا على واتساب. منصة واحدة بلا تشتّت بين البرامج.</p>
-          <div class="hero-benefits"><span><b>⚡</b> يعمل دون اتصال</span><span><b>🛠</b> دعم فني 24/7</span><span><b>🔒</b> بياناتك آمنة</span></div>
+          <div class="hero-benefits">
+      <span><b>⚡</b> يعمل دون اتصال</span>
+      <span><b>🛠</b> دعم فني 24/7</span>
+      <span><b>🔒</b> بياناتك آمنة</span>
+    </div>
         </div>
         <div class="card quote-form" id="quote">
           <h3>اطلب عرضًا مخصصًا لنشاطك</h3>
-          <div class="desc">ابدأ تجربتك المجانية لمدة 14 يومًا — بدون بطاقة ائتمان. اترك بياناتك وسنساعدك في تهيئة حساباتي بما يناسب نشاطك.</div>
+          <div class="desc">ابدأ تجربتك المجانية لمدة 14 يومًا — بدون بطاقة ائتمان. اترك بياناتك، وسيتواصل معك فريقنا المختص خلال 48 ساعة لمساعدتك على البدء بما يناسب نشاطك.</div>
           <div class="fields">
             <div class="field"><label>الاسم</label><input placeholder="اسمك الكامل"></div>
             <div class="field"><label>رقم التواصل</label><input placeholder="05xxxxxxxx"></div>
@@ -424,7 +1042,7 @@
       </div>
     </section>
 
-    <section class="section" id="sectors">
+<section class="section" id="sectors">
       <div class="container">
         <div class="title-block"><div class="small-title">حساباتي يخدم دورك</div><h2>مهما كان دورك في المنشأة — النظام يشتغل معك</h2><p class="lead">كل شخص في فريقك يفتح ما يخصه فقط، ويشوف المعلومة التي يحتاجها لاتخاذ قراره.</p></div>
         <div class="grid-4">
@@ -460,13 +1078,42 @@
     <section class="section">
       <div class="container">
         <div class="title-block"><div class="small-title">لماذا حساباتي</div><h2>أشياء تفرق معك يوم بيوم</h2></div>
-        <div class="grid-2">
-          <div class="adv"><div class="icon">◫</div><h4>فاتورة إلكترونية مدمجة</h4><p>الربط مع هيئة الزكاة والضريبة في قلب النظام — لا إضافة ولا وسيط ولا رسوم منفصلة.</p></div>
-          <div class="adv"><div class="icon">✆</div><h4>ملخصك على واتساب لحظًا</h4><p>المبيعات والأرباح وتنبيهات المخزون تصلك على واتساب أولاً بأول — تتابع فروعك من جوالك.</p></div>
-          <div class="adv"><div class="icon">⌖</div><h4>من أي مكان، بأي جهاز</h4><p>متصفح، أندرويد، iOS، وكاشير ويندوز — مزامنة لحظية بين كل الأجهزة والفروع.</p></div>
-          <div class="adv"><div class="icon">◌</div><h4>دعم بشري بالعربية</h4><p>فريق دعم يرد بسرعة عبر واتساب والهاتف، ومساعدة في الترحيل من نظامك السابق.</p></div>
-          <div class="adv"><div class="icon">⟂</div><h4>يعمل دون اتصال</h4><p>لو انقطع الإنترنت يكمل البيع في الكاشير، وتتزامن الفواتير تلقائيًا عند عودة الاتصال.</p></div>
-          <div class="adv"><div class="icon">⌘</div><h4>سعر واضح بالريال</h4><p>اشتراك شهري أو سنوي بلا رسوم خفية ولا مفاجآت — تعرف ما تدفعه من البداية.</p></div>
+        <div class="grid-2 daily-diff-grid">
+          <div class="adv">
+            <div class="icon">📲</div>
+            <h4>فاتورتك على جوال العميل بـ NFC</h4>
+            <p>يقرّب العميل جواله من نقطة الكاشير وتفتح الفاتورة الرقمية مباشرة ليحفظها PDF — بدون ورق أو طابعة.</p>
+          </div>
+
+          <div class="adv">
+            <div class="icon">💬</div>
+            <h4>واتساب جزء من شغلك اليومي</h4>
+            <p>أرسل الفواتير والتذكيرات والتنبيهات وملخص المبيعات اليومي عبر واتساب، وتابع نشاطك حتى وأنت خارج الفرع.</p>
+          </div>
+
+          <div class="adv">
+            <div class="icon">⟂</div>
+            <h4>البيع يستمر حتى بدون إنترنت</h4>
+            <p>يواصل الكاشير العمل عند انقطاع الاتصال، ثم تتزامن العمليات تلقائيًا بعد عودة الإنترنت.</p>
+          </div>
+
+          <div class="adv">
+            <div class="icon">🔄</div>
+            <h4>احجز المخزون من أي فرع</h4>
+            <p>اعرف أين تتوفر الكمية، احجزها للفرع الطالب، وانقلها بإجراء واضح بدل خسارة البيع بسبب نفاد الصنف.</p>
+          </div>
+
+          <div class="adv">
+            <div class="icon">▦</div>
+            <h4>كتالوج إلكتروني مجاني</h4>
+            <p>اعرض منتجاتك وخدماتك عبر رابط أو QR، وحدّث الأسعار والمحتوى بدون طباعة كتالوج جديد كل مرة.</p>
+          </div>
+
+          <div class="adv">
+            <div class="icon">🎫</div>
+            <h4>الدعم الفني من داخل النظام</h4>
+            <p>ارفع تذكرة، أرفق صورة للمشكلة، وتابع الدردشة والحل في مكان واحد بدون ضياع تفاصيل المحادثة.</p>
+          </div>
         </div>
         <div class="before-after">
           <div class="compare bad before-card"><h4>قبل حساباتي</h4><ul class="clean" style="list-style:none;padding:0;margin:14px 0 0"><li>ملفات إكسل متفرقة وأرقام لا تتطابق</li><li>لا تعرف المخزون الحقيقي إلا بجرد يدوي</li><li>الأرباح غير واضحة إلا آخر الشهر</li><li>فواتير ومبيعات يدويًا وبرامج منفصلة</li><li>متابعة الفروع تحتاج مكالمات ورسائل</li></ul></div>
@@ -478,12 +1125,99 @@
     <section class="section-soft section" id="clients">
       <div class="container">
         <div class="title-block"><div class="small-title">منشآت تستخدم حساباتي كل يوم</div><h2>آراء مختصرة من عملائنا</h2></div>
-        <div class="stories">
-          <div class="story"><div class="stars">★★★★★</div><p>«صار إدارة المطعم أسهل، وقت الزحمة والصرفية كلها صارت واضحة بدقة.»</p><span class="badge">وقت أقل في الجرد والحسابات</span><div class="meta"><div><strong>عميل مطعم</strong><br>الرياض · نموذج مؤقت</div><div>؟</div></div></div>
-          <div class="story"><div class="stars">★★★★★</div><p>«كل العمليات توصلني على واتساب — أتابع الفرعين من جوالي.»</p><span class="badge">متابعة الفروع من الجوال</span><div class="meta"><div><strong>عميل كافيه</strong><br>جدة · نموذج مؤقت</div><div>؟</div></div></div>
-          <div class="story"><div class="stars">★★★★★</div><p>«التقارير فرزت لي أكثر طلبًا، وأقدر أفصل قبل ما أخسر.»</p><span class="badge">قرارات شراء أوضح</span><div class="meta"><div><strong>عميل محل خياطة</strong><br>مكة · نموذج مؤقت</div><div>؟</div></div></div>
-          <div class="story"><div class="stars">★★★★★</div><p>«صار عندنا المخزون والمبيعات والفواتير واضحة في مكان واحد، ومتابعة الفروع أسهل.»</p><span class="badge">إدارة أوضح للفروع والمخزون</span><div class="meta"><div><strong>عميل جملة</strong><br>الرياض · نموذج مؤقت</div><div>؟</div></div></div>
-        </div>
+        
+<div class="stories">
+  <article class="story">
+    <div class="quote-mark">“</div>
+    <div class="story-head">
+      <div class="stars">★★★★★</div>
+      <span class="story-chip">وضوح أعلى في التشغيل</span>
+    </div>
+    <p>«بعد استخدام حساباتي صارت المبيعات والمصاريف والصرفية أوضح، وحتى وقت الزحمة صرنا نشتغل بثقة أكبر داخل المطعم.»</p>
+    <div class="meta">
+      <div>
+        <strong>أبو فهد — مالك مطعم</strong>
+        <span>الرياض</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="story">
+    <div class="quote-mark">“</div>
+    <div class="story-head">
+      <div class="stars">★★★★★</div>
+      <span class="story-chip">متابعة أسهل من الجوال</span>
+    </div>
+    <p>«أكثر شيء فرق معي أن ملخص العمل يوصلني مباشرة، وصرت أتابع المبيعات والورديات وأنا خارج الكافيه بسهولة.»</p>
+    <div class="meta">
+      <div>
+        <strong>فيصل — مالك كافيه</strong>
+        <span>جدة</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="story">
+    <div class="quote-mark">“</div>
+    <div class="story-head">
+      <div class="stars">★★★★★</div>
+      <span class="story-chip">قرارات أوضح</span>
+    </div>
+    <p>«التقارير فرزت لي أكثر الطلبات وأوضحت لي حركة الشغل، وصار اتخاذ القرار في محل الخياطة أسهل وأسرع.»</p>
+    <div class="meta">
+      <div>
+        <strong>هند — صاحبة محل خياطة</strong>
+        <span>مكة</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="story">
+    <div class="quote-mark">“</div>
+    <div class="story-head">
+      <div class="stars">★★★★★</div>
+      <span class="story-chip">تحكم أفضل بالفروع</span>
+    </div>
+    <p>«صار عندنا المخزون والمبيعات والفواتير أوضح في مكان واحد، ومتابعة الفروع والطلبات بين الفروع أسهل بكثير.»</p>
+    <div class="meta">
+      <div>
+        <strong>سالم — نشاط جملة وتوزيع</strong>
+        <span>الرياض</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="story">
+    <div class="quote-mark">“</div>
+    <div class="story-head">
+      <div class="stars">★★★★★</div>
+      <span class="story-chip">تنظيم أدق للتحصيل</span>
+    </div>
+    <p>«في إدارة العقارات ساعدنا النظام في متابعة الإيجارات والمبالغ المستحقة، والتنبيهات صارت أوضح وأرتب من السابق.»</p>
+    <div class="meta">
+      <div>
+        <strong>عبدالرحمن — إدارة عقارات</strong>
+        <span>الدمام</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="story">
+    <div class="quote-mark">“</div>
+    <div class="story-head">
+      <div class="stars">★★★★★</div>
+      <span class="story-chip">متابعة منظمة للطلبات</span>
+    </div>
+    <p>«في الورشة صارت أوامر العمل والمتابعة والتكاليف أوضح، وحتى الرجوع للحالات السابقة أصبح أسهل على الفريق.»</p>
+    <div class="meta">
+      <div>
+        <strong>ناصر — ورشة صيانة</strong>
+        <span>الخبر</span>
+      </div>
+    </div>
+  </article>
+</div>
+
         <div class="success">
           <div class="dash"><div class="dash-top"><div>مبيعات اليوم<br>18,542 ريال</div><div>فواتير<br>127</div><div>صافي الربح<br>5,130 ريال</div></div><div class="bars"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div></div>
           <div><h3 style="font-size:40px;color:#fff">قصة نجاح — تنسيق بيانات عميل حقيقي</h3><p style="color:#dce7f8;font-size:21px">قبل: فروع، ملفات إكسل منفصلة، جرد يدوي، وصعوبة معرفة ربح كل فرع.<br>بعد: تعريف موحد للأصناف، مبيعات ومخزون لكل فرع، ورؤية كاملة للإدارة.</p><div class="chips" style="margin-top:16px"><span class="chip" style="background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.18);color:#fff">وقت أقل للجرد</span><span class="chip" style="background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.18);color:#fff">جرد المخزون</span><span class="chip" style="background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.18);color:#fff">ربح كل فرع واضح</span></div></div>
@@ -520,7 +1254,102 @@
           <div class="pricing"><div class="tag">للمنشآت</div><h4 class="plan">حسب الطلب</h4><div class="sub">تسعير مخصص للاحتياجات الأكبر</div><ul class="clean"><li>عدد فروع أكبر، دعم مخصص، وحلول تنفيذية</li><li>دعم أولوية</li><li>ترحيل بيانات فعال</li><li>تقارير مخصصة حسب احتياج المنشأة</li></ul><div class="cta"><a class="btn btn-primary" href="#quote">تحدث مع المبيعات</a></div></div>
         </div>
         <p style="text-align:center;color:#717986;margin-top:18px">الأسعار لا تشمل ضريبة القيمة المضافة. الأرقام هنا مبدئية — تعتمد الأسعار النهائية قبل النشر.</p>
-      </div>
+
+
+<div class="hisabati-addons" id="addons">
+  <div class="addons-head">
+    <h3>إضافات حساباتي</h3>
+    <p>وسّع باقتك حسب احتياج منشأتك، واختر فقط الإضافات التي تحتاجها.</p>
+  </div>
+
+  <div class="addons-grid addons-grid-3">
+    <div class="addon-card" data-price="99">
+      <div class="addon-icon">👤</div>
+      <h4>إضافة مستخدم جديد</h4>
+      <p class="addon-desc">أضف مستخدمًا جديدًا مع الصلاحيات المناسبة لدوره داخل المنشأة.</p>
+      <div class="addon-price"><strong>99 ر.س</strong> / سنة <small>شامل الضريبة</small></div>
+      <div class="qty-control"><button type="button" class="minus">−</button><div class="qty">0</div><button type="button" class="plus">+</button></div>
+    </div>
+
+    <div class="addon-card" data-price="445">
+      <div class="addon-icon">⑂</div>
+      <h4>إضافة فرع جديد</h4>
+      <p class="addon-desc">أضف فرعًا جديدًا واربط مبيعاته ومخزونه وتقاريره مع باقي الفروع.</p>
+      <div class="addon-price"><strong>445 ر.س</strong> / سنة <small>شامل الضريبة</small></div>
+      <div class="qty-control"><button type="button" class="minus">−</button><div class="qty">0</div><button type="button" class="plus">+</button></div>
+    </div>
+
+    <div class="addon-card" data-price="588">
+      <div class="addon-icon">💼</div>
+      <h4>إدارة المشاريع</h4>
+      <p class="addon-desc">تابع المشاريع والتكاليف والمصروفات وحالة التنفيذ بصورة أوضح.</p>
+      <div class="addon-price"><strong>588 ر.س</strong> / سنة <small>شامل الضريبة</small></div>
+      <div class="qty-control"><button type="button" class="minus">−</button><div class="qty">0</div><button type="button" class="plus">+</button></div>
+    </div>
+
+    <div class="addon-card" data-price="290">
+      <div class="addon-icon">🏭</div>
+      <h4>إدارة الإنتاج</h4>
+      <p class="addon-desc">نظّم عمليات الإنتاج والمواد والتكاليف ومتابعة التصنيع.</p>
+      <div class="addon-price"><strong>290 ر.س</strong> / سنة <small>شامل الضريبة</small></div>
+      <div class="qty-control"><button type="button" class="minus">−</button><div class="qty">0</div><button type="button" class="plus">+</button></div>
+    </div>
+
+    <div class="addon-card" data-price="390">
+      <div class="addon-icon">🏢</div>
+      <h4>إدارة العقارات</h4>
+      <p class="addon-desc">إدارة العقود والوحدات والإيجارات والاستحقاقات والمتابعة.</p>
+      <div class="addon-price"><strong>390 ر.س</strong> / سنة <small>شامل الضريبة</small></div>
+      <div class="qty-control"><button type="button" class="minus">−</button><div class="qty">0</div><button type="button" class="plus">+</button></div>
+    </div>
+
+    <div class="addon-card" data-price="290">
+      <div class="addon-icon">▣</div>
+      <h4>إدارة الأصول</h4>
+      <p class="addon-desc">سجّل الأصول وتابع حالتها وقيمتها وحركتها داخل المنشأة.</p>
+      <div class="addon-price"><strong>290 ر.س</strong> / سنة <small>شامل الضريبة</small></div>
+      <div class="qty-control"><button type="button" class="minus">−</button><div class="qty">0</div><button type="button" class="plus">+</button></div>
+    </div>
+
+    <div class="addon-card" data-price="290">
+      <div class="addon-icon">✂️</div>
+      <h4>إدارة الخياطة</h4>
+      <p class="addon-desc">إدارة المقاسات والطلبات ومراحل التجهيز والاستلام للعملاء.</p>
+      <div class="addon-price"><strong>290 ر.س</strong> / سنة <small>شامل الضريبة</small></div>
+      <div class="qty-control"><button type="button" class="minus">−</button><div class="qty">0</div><button type="button" class="plus">+</button></div>
+    </div>
+
+    <div class="addon-card" data-price="290">
+      <div class="addon-icon">🤝</div>
+      <h4>إدارة علاقات العملاء</h4>
+      <p class="addon-desc">نظّم بيانات العملاء والمتابعة والتواصل والفرص في مكان واحد.</p>
+      <div class="addon-price"><strong>290 ر.س</strong> / سنة <small>شامل الضريبة</small></div>
+      <div class="qty-control"><button type="button" class="minus">−</button><div class="qty">0</div><button type="button" class="plus">+</button></div>
+    </div>
+
+    <div class="addon-card" data-price="390">
+      <div class="addon-icon">🏨</div>
+      <h4>إدارة الفنادق</h4>
+      <p class="addon-desc">تابع الحجوزات والغرف والفواتير والتشغيل اليومي للفندق.</p>
+      <div class="addon-price"><strong>390 ر.س</strong> / سنة <small>شامل الضريبة</small></div>
+      <div class="qty-control"><button type="button" class="minus">−</button><div class="qty">0</div><button type="button" class="plus">+</button></div>
+    </div>
+
+    <div class="addon-card" data-price="249">
+      <div class="addon-icon">💬</div>
+      <h4>إدارة واتساب وإرسال الرسائل</h4>
+      <p class="addon-desc">استخدم واتساب لإرسال الرسائل والتنبيهات والتواصل مع العملاء.</p>
+      <div class="addon-price"><strong>249 ر.س</strong> / سنة <small>شامل الضريبة</small></div>
+      <div class="qty-control"><button type="button" class="minus">−</button><div class="qty">0</div><button type="button" class="plus">+</button></div>
+    </div>
+  </div>
+
+  <div class="addons-total">
+    <span>إجمالي الإضافات سنويًا</span>
+    <strong><span id="addonsTotal">0</span> ر.س</strong>
+  </div>
+</div>
+</div>
     </section>
 
     <section class="section-soft section"><div class="container"><div class="cta-banner"><h2>خَلّ عينك على حلالك — من نظام واحد</h2><p>احجز عرضًا مخصصًا لنشاطك — ونتواصل معك خلال 48 ساعة.</p><div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap"><a class="btn btn-secondary" href="#quote">احجز عرضًا</a><a class="btn btn-outline" href="https://wa.me/966552350055" target="_blank" rel="noopener">تواصل عبر واتساب</a></div></div></div></section>
@@ -599,8 +1428,32 @@
       });
     })();
   </script>
+
+<script id="addons-preview-script">
+(function(){
+  const cards = document.querySelectorAll('.addon-card[data-price]');
+  const totalEl = document.getElementById('addonsTotal');
+  function recalc(){
+    let total = 0;
+    cards.forEach(card => {
+      const qty = parseInt(card.querySelector('.qty').textContent || '0', 10);
+      total += qty * parseFloat(card.dataset.price || '0');
+    });
+    if(totalEl) totalEl.textContent = total.toLocaleString('ar-SA');
+  }
+  cards.forEach(card => {
+    const qtyEl = card.querySelector('.qty');
+    card.querySelector('.plus')?.addEventListener('click', () => {
+      qtyEl.textContent = String(parseInt(qtyEl.textContent || '0',10) + 1);
+      recalc();
+    });
+    card.querySelector('.minus')?.addEventListener('click', () => {
+      qtyEl.textContent = String(Math.max(0, parseInt(qtyEl.textContent || '0',10) - 1));
+      recalc();
+    });
+  });
+})();
+</script>
+
 </body>
 </html>
-
-
-
