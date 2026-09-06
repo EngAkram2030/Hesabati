@@ -30,7 +30,7 @@
     .quote-form{padding:24px}.quote-form h3{font-size:42px;margin-bottom:8px}.quote-form .desc{font-size:15px;color:#767f8c}.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}.field{display:flex;flex-direction:column;gap:8px} label{font-size:14px;color:#58616d;font-weight:700} input{height:55px;border:1px solid var(--border);border-radius:12px;padding:0 16px;font-size:16px;background:#fff;font-family:inherit;color:var(--text)} .submit{width:100%;margin-top:16px}.contact-mini{text-align:center;margin-top:16px;color:#777f8b;font-size:15px}.contact-mini .links{margin-top:8px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap;font-weight:700}
     .logos-wrap{text-align:center}.logos-title{font-weight:700;color:#78818c;margin-bottom:28px}.logos-viewport{overflow:hidden;position:relative;padding:2px 0}.logos-track{display:flex;gap:14px;width:max-content;animation:logosMarquee 24s linear infinite}.logos-viewport:hover .logos-track{animation-play-state:paused}.logo-card{width:180px;height:112px;flex:0 0 180px;padding:14px;background:#fff;border:1px solid var(--border);border-radius:16px;display:flex;align-items:center;justify-content:center}.logo-card img{max-width:100%;max-height:78px;object-fit:contain}@keyframes logosMarquee{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 7px))}}.notice{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:8px 14px;border:1px solid #d7bf92;border-radius:999px;background:#fff8ee;color:#a07128;font-size:14px}
     .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #e6dfd4;border-bottom:1px solid #e6dfd4;background:#fbfaf7}.stat{padding:22px 8px;text-align:center;position:relative}.stat:not(:last-child)::after{content:'';position:absolute;left:0;top:22px;bottom:22px;width:1px;background:#e3dcd0}.num{font-size:48px;color:var(--blue);font-weight:900}.txt{font-size:16px;color:#717986;font-weight:700}
-    .title-block{max-width:720px;margin-right:auto;margin-bottom:34px}.title-block.center{margin:0 auto 34px;text-align:center}.title-block .lead{font-size:23px}
+    .title-block{max-width:760px;margin:0 auto 34px;text-align:center}.title-block.center{margin:0 auto 34px;text-align:center}.title-block .lead{font-size:23px}
     .grid-3,.grid-4,.grid-2,.modules,.pricing-grid,.stories{display:grid;gap:18px}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}.modules{grid-template-columns:repeat(3,1fr)}.pricing-grid{grid-template-columns:repeat(3,1fr)}.stories{grid-template-columns:repeat(2,1fr)}
     .feature,.step,.role,.module,.adv,.story,.pricing,.compare,.faq-item,.table-wrap{background:var(--card);border:1px solid var(--border);border-radius:var(--radius)}
     .feature,.step,.role,.module,.adv{padding:24px}.story,.pricing,.compare{padding:24px}
@@ -63,7 +63,6 @@
     <div class="container nav">
       <a href="#top" class="brand"><img src="assets/hisabati-logo.png" alt="شعار حساباتي"></a>
       <nav class="menu">
-        <a href="#system">النظام</a>
         <a href="#fields">المجالات</a>
         <a href="#clients">عملاؤنا</a>
         <a href="#pricing">الباقات</a>
@@ -164,33 +163,11 @@
       </div>
     </section>
 
-    <section class="section-soft section" id="system">
-      <div class="container">
-        <div class="title-block"><div class="small-title">الخدمات الرئيسية</div><h2>كل ما تحتاجه لإدارة منشأتك في نظام واحد</h2><p class="lead">من المبيعات والمحاسبة إلى المخزون والفروع والتقارير، حساباتي يجمع العمليات اليومية في مكان واحد واضح وسهل.</p></div>
-        <div class="modules">
-          <div class="module"><div class="icon">◪</div><h4>نقاط البيع والمبيعات</h4><p>فواتير، مرتجعات، خصومات، ورديات وصناديق ومتابعة المبيعات اليومية.</p></div>
-          <div class="module"><div class="icon">▣</div><h4>المحاسبة والقيود المالية</h4><p>دليل الحسابات، القيود، المصروفات، سندات القبض والصرف والقوائم المالية.</p></div>
-          <div class="module"><div class="icon">◫</div><h4>المخزون والمستودعات</h4><p>الأصناف، الجرد، التحويلات، التنبيهات، وتعدد الفروع والمستودعات.</p></div>
-          <div class="module"><div class="icon">🛍</div><h4>المشتريات والموردون</h4><p>المشتريات، فواتير الموردين، المدفوعات، الذمم وكشوف الحساب.</p></div>
-          <div class="module"><div class="icon">👥</div><h4>العملاء وإدارة الحسابات</h4><p>بيانات العملاء، المديونيات، الدفعات، كشوف الحساب ومتابعة الأرصدة.</p></div>
-          <div class="module"><div class="icon">⚡</div><h4>الفوترة الإلكترونية</h4><p>إصدار وإدارة الفواتير الإلكترونية وفق متطلبات هيئة الزكاة والضريبة والجمارك.</p></div>
-          <div class="module"><div class="icon">📈</div><h4>التقارير والإحصائيات</h4><p>تقارير المبيعات والأرباح والمصروفات والمخزون والعملاء والموردين والتقارير المالية.</p></div>
-          <div class="module"><div class="icon">👤</div><h4>الموظفون والصلاحيات</h4><p>المستخدمون، الأدوار والصلاحيات والتحكم في وصول كل موظف حسب مهامه.</p></div>
-          <div class="module"><div class="icon">⌂</div><h4>إدارة الفروع</h4><p>متابعة المبيعات والمخزون والعمليات لكل فرع بشكل مستقل أو مجمع.</p></div>
-          <div class="module"><div class="icon">▦</div><h4>المشاريع والمقاولات</h4><p>متابعة المشاريع والتكاليف والمصروفات والعهد والعمليات المرتبطة بالمقاولات.</p></div>
-          <div class="module"><div class="icon">✂</div><h4>الخياطة والتفصيل</h4><p>إدارة الطلبات والمقاسات ومراحل العمل والتسليم للعملاء.</p></div>
-          <div class="module"><div class="icon">⚙</div><h4>الصيانة والورش</h4><p>أوامر الصيانة، حالة الطلب، قطع الغيار، أجور الصيانة ومتابعة التسليم.</p></div>
-          <div class="module"><div class="icon">⌘</div><h4>العقارات والإيجارات</h4><p>العقود والوحدات والمستأجرون والدفعات والاستحقاقات ومتابعة التحصيل.</p></div>
-          <div class="module"><div class="icon">▤</div><h4>الفنادق والضيافة</h4><p>إدارة الخدمات والحجوزات والفوترة والعمليات اليومية حسب طبيعة النشاط.</p></div>
-        </div>
-      </div>
-    </section>
-
     <section class="section"><div class="container"><div class="quote-banner"><div class="stars">★★★★★</div><blockquote>«كل العمليات توصلني على واتساب — صرت أتابع الفرعين من جوالي وأنا مرتاح.»</blockquote><div>عميل كافيه جدة — نموذج مؤقت</div></div></div></section>
 
     <section class="section-soft section" id="fields">
       <div class="container">
-        <div class="title-block"><div class="small-title">مصمم لمجال عملك</div><h2>إعدادات وحلول تناسب طبيعة نشاطك</h2><p class="lead">اختر مجال نشاطك، ونعرّفك على الأدوات والخدمات المناسبة لطريقة عمل منشأتك.</p></div>
+        <div class="title-block"><div class="small-title">مصمم لمجال عملك</div><h2>حلول جاهزة حسب نشاطك</h2><p class="lead">اختر مجال عملك وشاهد كيف يتكيف حساباتي مع احتياج منشأتك.</p></div>
         <div class="sector-grid">
           <div class="sector-card"><div class="sector-no">1</div><div><strong>المقاولات والمشاريع</strong><span>المشاريع، التكاليف، المصروفات والعهد</span></div></div>
           <div class="sector-card"><div class="sector-no">2</div><div><strong>محلات الخياطة والتفصيل</strong><span>الطلبات، المقاسات ومراحل التفصيل والتسليم</span></div></div>
@@ -279,7 +256,7 @@
   <footer>
     <div class="container footer">
       <div><h4>حساباتي</h4><p>نظام سحابي سعودي لإدارة الأعمال — نقاط البيع، المخزون، المحاسبة والفوترة.</p><div class="stores"><span class="store">AppGallery</span><span class="store">Google Play</span><span class="store">App Store</span><span class="store">Windows</span></div></div>
-      <div><h4>النظام</h4><a href="#system">نقاط البيع</a><a href="#system">المحاسبة</a><a href="#system">المخزون</a><a href="#system">الفوترة الإلكترونية</a></div>
+      <div><h4>المجالات</h4><a href="#fields">المقاولات والمشاريع</a><a href="#fields">الخياطة والتفصيل</a><a href="#fields">التجزئة والجملة</a><a href="#fields">المطاعم والمقاهي</a></div>
       <div><h4>الشركة</h4><a href="#clients">لماذا حساباتي</a><a href="#pricing">الأسعار</a><a href="#faq">الأسئلة الشائعة</a><a href="#quote">تواصل معنا</a></div>
       <div><h4>تواصل</h4><a href="mailto:info@hisabati.ai">info@hisabati.ai</a><a href="tel:0546118817">0546118817</a><a href="https://wa.me/966552350055" target="_blank" rel="noopener">0552350055 واتساب</a><a href="#quote">احجز عرضًا</a></div>
     </div>
