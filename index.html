@@ -219,6 +219,102 @@
 }
 
 </style>
+<style id="hero-v12-final">
+
+@media (min-width:1101px){
+    .hero h1{
+        font-size:48px !important;
+        line-height:1.25 !important;
+        white-space:nowrap !important;
+        letter-spacing:-0.5px !important;
+        margin-bottom:16px !important;
+    }
+
+    .hero .lead{
+        font-size:18px !important;
+        line-height:1.9 !important;
+        max-width:650px !important;
+        color:#5f6b7c !important;
+    }
+}
+
+.hero-benefits{
+    display:flex !important;
+    align-items:center !important;
+    flex-wrap:wrap !important;
+    gap:12px 18px !important;
+    margin-top:20px !important;
+}
+
+.hero-benefits span{
+    display:inline-flex !important;
+    align-items:center !important;
+    gap:7px !important;
+    font-size:14px !important;
+    font-weight:700 !important;
+    color:var(--text) !important;
+    white-space:nowrap !important;
+}
+
+.hero-benefits b{
+    width:24px !important;
+    height:24px !important;
+    display:inline-grid !important;
+    place-items:center !important;
+    border-radius:8px !important;
+    background:#EEF4FF !important;
+    border:1px solid #D8E4F5 !important;
+    font-size:12px !important;
+    font-weight:400 !important;
+}
+
+.quote-form{
+    padding:26px 24px !important;
+}
+
+.quote-form h3{
+    font-size:25px !important;
+    line-height:1.35 !important;
+    white-space:nowrap !important;
+    text-align:center !important;
+    margin-bottom:10px !important;
+}
+
+.quote-form .desc{
+    font-size:13px !important;
+    line-height:1.85 !important;
+    text-align:center !important;
+    max-width:390px !important;
+    margin:0 auto 16px !important;
+    color:#6B7280 !important;
+}
+
+.quote-form .contact-mini{
+    font-size:12.5px !important;
+    line-height:1.7 !important;
+    color:#6B7280 !important;
+    text-align:center !important;
+}
+
+@media (max-width:1100px){
+    .hero h1{
+        white-space:normal !important;
+        font-size:42px !important;
+    }
+
+    .quote-form h3{
+        white-space:normal !important;
+    }
+}
+
+@media (max-width:700px){
+    .hero-benefits{
+        flex-direction:column !important;
+        align-items:flex-start !important;
+    }
+}
+
+</style>
 </head>
 <body>
   <div class="topbar"><div class="container inner"><span>استشارة مجانية وعرض مخصص لنشاطك</span><a href="https://wa.me/966552350055" target="_blank" rel="noopener">تواصل عبر واتساب</a></div></div>
@@ -252,11 +348,11 @@
           <div class="eyebrow"><img src="assets/zatca-badge.png" alt="متوافق مع متطلبات المرحلة الثانية للفوترة الإلكترونية"></div>
           <h1>خَلّ عينك على حلالك</h1>
           <p class="lead">نظام واحد لنقاط البيع والمحاسبة والمخزون والفريق — تتابعه من جوالك، ويصلك تقريرك اليومي مختصرًا على واتساب. منصة واحدة بلا تشتّت بين البرامج.</p>
-          <div class="check-list"><span><i>✓</i> يعمل دون اتصال</span><span><i>✓</i> دعم فني 24/7</span><span><i>✓</i> جاهزية النظام 99.9%</span></div>
+          <div class="hero-benefits"><span><b>⚡</b> يعمل دون اتصال</span><span><b>🛠</b> دعم فني 24/7</span><span><b>🔒</b> بياناتك آمنة</span></div>
         </div>
         <div class="card quote-form" id="quote">
-          <h3>اطلب عرض مخصص لنشاطك</h3>
-          <div class="desc">اترك بياناتك ونتواصل معك خلال 48 ساعة بعرض يناسب مجال عملك — بدون أي التزام.</div>
+          <h3>اطلب عرضًا مخصصًا لنشاطك</h3>
+          <div class="desc">ابدأ تجربتك المجانية لمدة 14 يومًا — بدون بطاقة ائتمان. اترك بياناتك وسنساعدك في تهيئة حساباتي بما يناسب نشاطك.</div>
           <div class="fields">
             <div class="field"><label>الاسم</label><input placeholder="اسمك الكامل"></div>
             <div class="field"><label>رقم التواصل</label><input placeholder="05xxxxxxxx"></div>
@@ -264,7 +360,7 @@
             <div class="field"><label>النشاط</label><input placeholder="مطعم، تجزئة، خياطة..."></div>
           </div>
           <a href="https://wa.me/966552350055" target="_blank" rel="noopener" class="btn btn-primary submit">احجز عرضًا</a>
-          <div class="contact-mini">فريقنا يتواصل معك خلال 48 ساعة
+          <div class="contact-mini">🔒 معلوماتك محمية ولن تُشارك مع أي طرف ثالث.
             <div class="links"><a href="https://wa.me/966552350055" target="_blank" rel="noopener">واتساب</a><a href="tel:0546118817">اتصال</a><a href="mailto:info@hisabati.ai">إيميل</a></div>
           </div>
         </div>
@@ -505,5 +601,6 @@
   </script>
 </body>
 </html>
+
 
 
